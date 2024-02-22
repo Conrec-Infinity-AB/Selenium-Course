@@ -65,9 +65,9 @@ In VS Code select Open folder and select the folder **_Selenium-Course_** where 
 If a warning is visible about trust of the files and folder is visible then select **_Yes, I trust the authors_**.
 
 ## Setup a local Python virtual environment and download Selenium related packages
-When we work with different Python projects it's always a good practise to create a virtual environments for the project so we don't install Python packages globally.
+When we work with different Python projects it's always a good practise to create a virtual environment for the project we are working with so we don't install Python packages globally.
 
-After we have openend our Selenium_Course project In visual Studio Code open the Command Palette by using **_CTRL + SHIFT + P_** or selecting it in the **_View Menu_** 
+After we have openend our Selenium_Course project In visual Studio Code, open the Command Palette by using **_CTRL + SHIFT + P_** or selecting it in the **_View Menu_** 
 
 Search for **_Python: Create Environment.._** and select it.
 
