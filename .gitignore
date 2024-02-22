@@ -1,6 +1,9 @@
 # Apple OSX files
 .DS_Store
 
+# Virtual environment
+seleniumcourse/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
