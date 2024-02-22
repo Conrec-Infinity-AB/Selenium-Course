@@ -1,7 +1,7 @@
 # Test automation with Selenium
-_This is the main repository for the course Test automation with Selenium created by Conrec Infinity_
+_This is the main repository for the course Test automation with Selenium created by Conrec Infinity where we will learn how to use Selenium and Python to test web pages._
 
-Main programming language in this course will be Python. In some of the lectures there will be examples in other languages too.
+Installation instructions will be targeted for the Windows platform but using Mac OSX or Linux will also work. Some instruktions will need som tweaking. The examples and lectures will focus on Python but can be applied to other languages like C# and Java too.
 
 ## Python and tools setup for Windows
 
@@ -63,3 +63,19 @@ _Are you sure you want to continue connecting (yes/no/[fingerprint])?_
 In VS Code select Open folder and select the folder **_Selenium-Course_** where the repository was cloned to.
 
 If a warning is visible about trust of the files and folder is visible then select **_Yes, I trust the authors_**.
+
+## Setup a local Python virtual environment and download Selenium related packages
+When we work with different Python projects it's always a good practise to create a virtual environments for the project so we don't install Python packages globally.
+
+After we have openend our Selenium_Course project In visual Studio Code open the Command Palette by using **_CTRL + SHIFT + P_** or selecting it in the **_View Menu_** 
+
+Search for **_Python: Create Environment.._** and select it.
+
+In the dropdown select the option **_Venv_** 
+
+Select the **_Python 3.x.y_** Python interpreter.
+
+Select the **_requirements.txt_** file and **_OK_**
+
+The virtual environment will be created and the Python packages used in this course will be downloaded.
+
