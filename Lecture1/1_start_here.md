@@ -13,8 +13,9 @@
 - Waiting for elements (implicit, explicit and fluid waits) & error handling
 - How to handle alerts, multiple browsers, tabs and frames
 - Using Python test framworks for validating tests
-- Writing a test framework
+- Test reporting tools
 - Setting up and running Selenium Grid for running tests remotely
+- Writing test frameworks
 
 ## Tools and programming languages ##
 - Python, but should be able to apply code to C# and Java easily
