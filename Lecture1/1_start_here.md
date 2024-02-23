@@ -11,8 +11,9 @@
 - CSS locators like IDs, CSS selectors, XPath and more 
 - Selenium Webdriver API
 - Waiting for elements (implicit, explicit and fluid waits) & error handling
+- How to handle alerts, multiple browsers, tabs and frames
 - Using Python test framworks for validating tests
-- How to handle alerts, multiple browsers and tabs
+- Writing a test framework
 - Setting up and running Selenium Grid for running tests remotely
 
 ## Tools and programming languages ##
