@@ -67,7 +67,7 @@ If a warning is visible about trust of the files and folder is visible then sele
 ## Setup a local Python virtual environment and download Selenium related packages
 When we work with different Python projects it's always a good practise to create a virtual environment for the project we are working with so we don't install Python packages globally.
 
-After we have openend our Selenium_Course project In visual Studio Code, open the Command Palette by using **_CTRL + SHIFT + P_** or selecting it in the **_View Menu_** 
+After we have openend our Selenium-Course project In visual Studio Code, open the Command Palette by using **_CTRL + SHIFT + P_** or selecting it in the **_View Menu_** 
 
 Search for **_Python: Create Environment.._** and select it.
 
@@ -80,7 +80,7 @@ Select the **_requirements.txt_** file and **_OK_**
 The virtual environment will be created and the Python packages used in this course will be downloaded.
 
 ## Test setup
-Open the file **./Lecture1/code/1_openingPage.py_** and run it by selecting **_Run / Run without debugging_** in the menu. If everything is setup correct then a Chrome web browser should open and close.
+Open the file **_./Lecture1/code/1_openingPage.py_** and run it by selecting **_Run / Run without debugging_** in the menu. If everything is setup correct then a Chrome web browser should open and close.
 
 The text below should be visible in Viual Studio Code terminal:
 
