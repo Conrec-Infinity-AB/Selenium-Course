@@ -12,7 +12,7 @@
 - Selenium Webdriver API
 - Waiting for elements (implicit, explicit and fluid waits) & error handling
 - How to handle alerts, multiple browsers, tabs and frames
-- Using Python test framworks for validating tests
+- Using Python test frameworks for validating tests
 - Test reporting tools
 - Setting up and running Selenium Grid for running tests remotely
 - Writing test frameworks
