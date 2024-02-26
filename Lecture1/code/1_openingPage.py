@@ -9,7 +9,7 @@ driver = webdriver.Chrome()
 # driver = webdriver.ChromiumEdge()
 
 # Open the page we want to test
-driver.get("https://www.saucedemo.com")
+driver.get("https://magento.softwaretestingboard.com")
 
 # Just get the title of the page and print to the console
 print("Title is: " + driver.title)

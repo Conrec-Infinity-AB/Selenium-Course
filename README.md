@@ -79,3 +79,9 @@ Select the **_requirements.txt_** file and **_OK_**
 
 The virtual environment will be created and the Python packages used in this course will be downloaded.
 
+## Test setup
+Open the file **./Lecture1/code/1_openingPage.py_** and run it by selecting **_Run / Run without debugging_** in the menu. If everything is setup correct then a Chrome web browser should open and close.
+
+The text below should be visible in Viual Studio Code terminal:
+
+> Title is: Home Page
