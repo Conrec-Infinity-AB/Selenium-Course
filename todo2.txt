@@ -1,0 +1,42 @@
+Setup env Virtual env sid 31
+python -m venv seleniumcourse
+
+Activate:
+.\seleniumcourse\Scripts\activate
+
+Requirements.txt
+pip install -r requirements.txt
+
+Create file: pip freeze > requirements.txt
+Uninstall packages: pip uninstall -y -r requirements.txt
+List packages which can be updated: pip list --outdated
+Update all packages in requirements.txt: pip install -U -r requirements.txt
+Update single package: pip install -U package
+
+Multibrowser support
+JUNit/NUnit, Cucumber, Maven, Jenkins, 
+Headless, parallel
+Mobile support using Appium
+
+Drivers will be downloaded in Python but in other languages we might need to manually download them and place in the path
+Lista download urls
+
+Test pages: 
+
+
+
+
+Selenium Grid
+- Used for running test remote. Use cases to have one or more servers running tests on different operating systems and browsers
+
+## Use cases ## 
+What to test and not to test. Risks and costs and repetation (regression tests)
+Limits of Selenium Webdriver
+
+## Other tools ## 
+- Cypress, Playwright and other tools
+
+
+
+### Test pages ###
+https://the-internet.herokuapp.com/
