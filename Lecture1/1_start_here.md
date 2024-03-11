@@ -8,6 +8,7 @@ We will also learn how to setup and create some simple Python code where we use 
 ## Practical info ##
 - Number of occasions and time limits
 - Assignments 
+- Exercises
 - Questions? Please ask questions and give feedback if something is unclear or you have som input/knowledge to share!
 
 ## Whats covered in this course ##
