@@ -6,12 +6,12 @@ A Document Object Model (DOM) tree is a hierarchical representation of an HTML o
 
 Elements in an HTML or XML document are represented as nodes in the DOM tree. Each element node has a tag name, attributes, and can contain other element nodes or text nodes as children. For example, an HTML document with the following structure:
 
-<html>
-  <head>
-    <title>My Webpage</title>
-  </head>
-  <body>
-    <h1>Welcome!</h1>
-    <p>This is my simple webpage.</p>
-  </body>
-</html>
+    <html>
+      <head>
+        <title>My Webpage</title>
+      </head>
+      <body>
+        <h1>Welcome!</h1>
+        <p>This is my simple webpage.</p>
+      </body>
+    </html>
