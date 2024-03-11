@@ -1,25 +1,37 @@
 # Lecture 1 #
+
 ## Intro ## 
+In this first lecture we will discuss some theory about test automation. It includes what a HTML page consists of, like the DOM-tree, CSS selectors and the dev tools we can use to help us to find elements in a HTML page. 
+
+We will also learn how to setup and create some simple Python code where we use Selenium WebDriver to open a web page and query different elements.   
+
+## Practical info ##
 - Number of occasions and time limits
 - Assignments 
- 
+- Questions? Please ask questions and give feedback if something is unclear or you have som input/knowledge to share!
+
 ## Whats covered in this course ##
 - Introduction to Selenium. When to automate and what to test. Best practices and pitfalls  
 - Setting up a new Python project with Selenium web driver 
 - Introduction to the HTML DOM tree. Different type of web elements
 - Introduction of Google Chrome Dev tools, how it can be used to inspect web pages and find elements and more  
 - CSS locators like IDs, CSS selectors, XPath and more 
+
 - Selenium Webdriver API
 - Waiting for elements (implicit, explicit and fluid waits) & error handling
 - How to handle alerts, multiple browsers, tabs and frames
+
 - Using Python test frameworks for validating tests
 - Test reporting tools
 - Setting up and running Selenium Grid for running tests remotely
+
+- Selenium Grid
 - Writing test frameworks
+- Comparing other automation test tools
 
 ## Tools and programming languages ##
 - Python, but should be able to apply code to C# and Java easily
-- Focus on Chrome and Devtools but any webbrowser can be used for running the tests
+- Focus on Chrome and Devtools but any webbrowser can be used for running the tests with some modification.
 
 ## Prerequsities ##
 - Basic understanding of Python
@@ -34,4 +46,3 @@
 - [Google DevTools](https://developer.chrome.com/docs/devtools) Googles developer tool used in Chrome webbrowser. A tool you should be comfortable with when writing Selenium tests
 - [Softwaretestingboard](https://magento.softwaretestingboard.com) The main site used for our project testing
 - [Saucedemo](https://www.saucedemo.com/) Another site which can be used for running tests against 
-
