@@ -11,20 +11,17 @@ We will also learn how to setup and create some simple Python code where we use 
 - Questions? Please ask questions and give feedback if something is unclear or you have som input/knowledge to share!
 
 ## Whats covered in this course ##
-- Introduction to Selenium. When to automate and what to test. Best practices and pitfalls  
-- Setting up a new Python project with Selenium web driver 
+- Introduction to Selenium. When to automate and what to test. Best practices and pitfalls
+- Setting up a new Python project with Selenium web driver
 - Introduction to the HTML DOM tree. Different type of web elements
-- Introduction of Google Chrome Dev tools, how it can be used to inspect web pages and find elements and more  
+- Introduction of Google Chrome Dev tools, how it can be used to inspect web pages and find elements and more
 - CSS locators like IDs, CSS selectors, XPath and more 
-
 - Selenium Webdriver API
 - Waiting for elements (implicit, explicit and fluid waits) & error handling
 - How to handle alerts, multiple browsers, tabs and frames
-
 - Using Python test frameworks for validating tests
 - Test reporting tools
 - Setting up and running Selenium Grid for running tests remotely
-
 - Selenium Grid
 - Writing test frameworks
 - Comparing other automation test tools

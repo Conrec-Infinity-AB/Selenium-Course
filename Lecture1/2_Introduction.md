@@ -54,6 +54,9 @@ If you are beginning with desktop website or mobile website test automation, the
 Selenium Grid allows you to run test cases in different machines across different platforms. The control of triggering the test cases is on the local end, and when the test cases are triggered, they are automatically executed by the remote end. After developing the WebDriver tests, you may face the need to run your tests on multiple browser and operating system combinations. This is where Grid comes into the picture.
 
 ## Selenium Webdriver ##
+
+![Selenium Webdriver](./Lambdatest%20JSON-Wire-Protocol-in-Selenium-WebDriver.png)
+
 WebDriver is responsible for running and executing the the webdriver steps you define in your Python code.
 
 WebDriver W3C is the newly introduced protocol for Selenium 4. WebDriver W3C Protocol replaces the older Webdriver using JSON Wire protocol which was used in older versions of Selenium. Webdriver W3C has been developed with regards of standards from World Wide Web Consortium, the community which works on web standards development.
