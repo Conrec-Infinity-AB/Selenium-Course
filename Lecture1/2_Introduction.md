@@ -76,8 +76,9 @@ Languge specific test frameworks are used together with WebDriver, such as JUnit
 On top of them, we might create additional high-level test automation frameworks that give us much more power to maintain, write faster, and troubleshoot tests. We will come back to this in a later lecture.
 
 ### Webdriver Manager ###
-Python library is used to automatically manage browser drivers without having to download and provide the path.  
+Webdriver Manager is used to automatically manage browser drivers without having to download and provide the path.  
 For now, it supports ChromeDriver, GeckoDriver, lEDriver, OperaDriver, and EdgeChromiumDriver.  
+
 Before Webdriver manager existed we had to manually download the browser drivers and save somewehere on our test machine. Usually in the test project folder or somewehere in the system path.  
 
 So by using the Webdriver Manager it helps us saving time by not manually download new browser driver everytime the browser updates.
