@@ -92,7 +92,8 @@ To load the packages, select it when creating a virtual environment in VS Code, 
 More information about pip and its command reference can be found at https://pip.pypa.io/en/stable/cli/pip_install/
 
 ### Advanced - Setting up a virtual environment in terminal ###
-If you are not using any IDE like VS Code the you can setup a virtual environment in terminal (Powershell). Below we create a virtual environment named *_.venv_* in a folder
+If you are not using any IDE like VS Code the you can setup a virtual environment in terminal (Powershell). Below we create a virtual environment named *_.venv_* in a folder. Make sure you setup the virtual environment before  you install any packages so the packages will be installed in the virtual environment.
+ 
 > python -m venv .venv
 
 Activate the new virtual environment
