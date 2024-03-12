@@ -36,6 +36,8 @@ Do not to create tests which is dependent of other tests. This is especially imp
 
 Test flakiness might be a problem. Do not add new tests directly to production environment tests. Make sure you have tested the new tests in different environments and browsers and not just one time before approving to add them to a test suite. A test can work 99% of the time but when a test fails 1% of the time because of flakiness it can make the developers and team not trust the tests.
 
+Expecting UI components / elements are always located in the same place. Changes to UI might move elements. This relates mostly to XPath selectors.
+
 ## The Selenium project ## 
 In this course we are focusing on Browser UI test automation with Selenium. But Selenium is not just one tool or API, it consists of many tools.
 
@@ -72,5 +74,13 @@ The drivers are specific to the browsers such as ChromeDriver for Google's Chrom
 Languge specific test frameworks are used together with WebDriver, such as JUnit, NUnit and Pytest. They are used to make assertions, integrate with test runners and visualize test results. 
 
 On top of them, we might create additional high-level test automation frameworks that give us much more power to maintain, write faster, and troubleshoot tests. We will come back to this in a later lecture.
+
+### Webdriver Manager ###
+Python library is used to automatically manage browser drivers without having to download and provide the path.  
+For now, it supports ChromeDriver, GeckoDriver, lEDriver, OperaDriver, and EdgeChromiumDriver.  
+Before Webdriver manager existed we had to manually download the browser drivers and save somewehere on our test machine. Usually in the test project folder or somewehere in the system path.  
+
+So by using the Webdriver Manager it helps us saving time by not manually download new browser driver everytime the browser updates.
+It downloads the correct browser driver and version, that is the browser and version you have installed on the system your run the tests on. 
 
 
