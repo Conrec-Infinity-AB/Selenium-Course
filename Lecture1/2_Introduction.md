@@ -16,19 +16,19 @@ Another benefit is consistency and repeatability. Test tools improve testing con
 ## When should automated testing not be used ##
 Unstable applications. The cornerstone of test automation is the premise that the expected application behavior is known. When this is not the case, it is usually better not to automate. 
 
-If the person/people writing the tests are not sufficiently experienced- their tests will have doubtful value. An automated test is only as good as the person who created it. If you don't have enough time or resources to manually complete your testing in the short term, don't expect test automation to help you.
+If the person/people writing the tests are not sufficiently experienced their tests will have doubtful value. An automated test is only as good as the person who created it. If you don't have enough time or resources to manually complete your testing in the short term, don't expect test automation to help you.
 
 Look at automation for the longer term. Remember that automation is a strategic solution, not a short-term fix.
 
 ## How not to automate ##
-Unrealistic expectations in organizations with limited experience with test automation. Make sure people have proper expectations. Tßime savings come only when automated tests can be executed more than once.
+Unrealistic expectations in organizations with limited experience with test automation. Make sure people have proper expectations. Time savings come only when automated tests can be executed more than once.
 
 Underestimating time, cost and effort required to implementing test automation. The test framework should be built and integrate with other tools like CI/CD pipelines. Test data setup should be reset after runs.
 Do not forget to set code standards and guidelines for the automation solution. Training of those who will use the test framework. 
 
 Underestimate maintenance. It can require a big effort to maintain tests. Budget for test maintenance is not always included. This can lead to running tests that result in false positives and negatives when theres no time to update tests.
 
-You should be careful which test cases you automate. There might be existing manual tests that are incomplete or incorrect. Always double-check manual test cases, data
+You should be careful which test cases you automate. There might be existing manual tests that are incomplete or incorrect. Always double-check manual test cases and test data.
 
 Automation is more than test execution. You need to document, manage and maintain the tests. Use tools for executing the testa and also have a good way of reporting the results to the organisation.
 
