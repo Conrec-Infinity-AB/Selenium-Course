@@ -33,7 +33,10 @@ We will also learn how to setup and create some simple Python code where we use 
 
 ## Prerequsities ##
 - Basic understanding of Python
-- A working setup of Python, Visual Studio Code and Selenium according to the **README.md** file in this project
+- A working setup of Python, Visual Studio Code and Selenium according to the **README.md** file in this 
+project
+
+<p style="color:yellow">NOTE: Always use GIT pull before every lecture, because the repository is updated every now and then!</p>
 
 ## Links ##
 - [Selenium documentation](https://www.selenium.dev/documentation/) Everything related to Selenium APi and Grid and more
