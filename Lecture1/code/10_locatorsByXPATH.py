@@ -19,7 +19,7 @@ driver.get("http://127.0.0.1:5500/Lecture1/code/locators.html")
 time.sleep(2) 
 
 # Example one by finding an element by using an absolut XPath
-driver.find_element(By.XPATH, '/html/body/form/div[1]/input').send_keys('ABSOLUT')
+driver.find_element(By.XPATH, '/html/body/form/div[1]/input').send_keys('ABSOLUTE')
 time.sleep(2)
 
 # Example two by finding the same element by using an relative XPATH. Here 
