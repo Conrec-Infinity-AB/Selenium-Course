@@ -43,6 +43,8 @@ Default options is enough but if you want to start VS Code from any folder locat
 
 Start Visual Studio Code and click on the extensions to the left of VS Code window and search for **_Python_** and install the Python extension from Microsoft - IntelliSense (Pylance) ... 
 
+Also install the **_Live Server_** extension which will be used to test local web pages.
+
 ## Clone and open repository
 Open a command prompt or Powershell terminal and create a folder where you want the Selenium project to reside:
 
