@@ -34,7 +34,7 @@ Automation is more than test execution. You need to document, manage and maintai
 
 Do not to create tests which is dependent of other tests. This is especially important when test executions are done in parallell. Tests will fail when some criterias are not fullfilled, or when dependent tests are run in different browser threads.
 
-Test flakiness might be a problem. Do not add new tests directly to production environment tests. Make sure you have tested the new tests in different environments and browsers and not just one time before approving to add them to a test suite. A test can work 99% of the time but when a test fails 1% of the time because of flakiness it can make the developers and team not trust the tests.
+Test flakiness might be a problem. It might be a good idea to not add new tests directly to the test environment where daily test runs are executed. Make sure you have tested the new tests in different environments and browsers and not just one time before approving to add them to a test suite. A test can work 99% of the time but when a test fails 1% of the time because of flakiness it can make the developers and team not trust the tests.
 
 Expecting UI components / elements are always located in the same place. Changes to UI might move elements. This relates mostly to XPath selectors.
 
