@@ -4,8 +4,7 @@ from selenium import webdriver
 
 # Which browser service should we use?
 from selenium.webdriver.chrome.service import Service
-# from selenium.webdriver.firefox.service import Service
-# from selenium.webdriver.chromium.service import ChromiumService
+#from selenium.webdriver.firefox.service import Service
 
 # Which webdriver do we want to download? 
 # We need to manually download the specific browser driver and unzip it to a folder on your computer. Eg C:\webdrivers
@@ -19,15 +18,14 @@ from selenium.webdriver.chrome.service import Service
 
 # Create the webdriver service objects and drivers for the browser we will use
 # Chrome/Chromium
-chrome_obj = Service("C:\webdrivers\chromedriver.exe")
+chrome_obj = Service("C:\\webdrivers\\chromedriver.exe")
 driver = webdriver.Chrome(service=chrome_obj)
 
 # Firefox
-# firefox_obj = Service("C:\webdrivers\geckodriver.exe")
-# driver = webdriver.Firefox(service=firefox_obj)
-
-# edge_obj = Service("C:\webdrivers\msedgedriver.exe")
-# driver = webdriver.ChromiumEdge(service=edge_obj)
+#firefox_obj = Service("C:\\webdrivers\\geckodriver.exe")
+#driver = webdriver.Firefox(service=firefox_obj)
 
 # Test driver by opening a page
 driver.get("https://magento.softwaretestingboard.com")
+
+driver.quit()
