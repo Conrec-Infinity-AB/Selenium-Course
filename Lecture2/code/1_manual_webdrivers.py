@@ -17,7 +17,7 @@ from selenium.webdriver.chrome.service import Service
 # Edge Chromium -> https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver
 
 # Create the webdriver service objects and drivers for the browser we will use
-# Chrome/Chromium
+# Chrome
 chrome_obj = Service("C:\\webdrivers\\chromedriver.exe")
 driver = webdriver.Chrome(service=chrome_obj)
 
