@@ -24,7 +24,7 @@ driver = webdriver.Chrome(service=chrome_obj)
 
 # Firefox
 # firefox_obj = Service("C:\webdrivers\geckodriver.exe")
-# driver = webdriver.Firefox(service=chrome_obj)
+# driver = webdriver.Firefox(service=firefox_obj)
 
 # edge_obj = Service("C:\webdrivers\msedgedriver.exe")
 # driver = webdriver.ChromiumEdge(service=edge_obj)
