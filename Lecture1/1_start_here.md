@@ -40,6 +40,7 @@ project
 
 ## Links ##
 - [Selenium documentation](https://www.selenium.dev/documentation/) Everything related to Selenium APi and Grid and more
+- [Python language bindings for Selenium WebDriver](https://www.selenium.dev/selenium/docs/api/py/api.html#) Python bindings for Selenium 4
 - [Python documentation](https://docs.python.org/3/) Everything related to the Python language 
 - [Python Package Index](https://pypi.org) The repository for Python packages which can be imported, including instructions how to install them with the **_pip_** command
 - [Selenium Package](https://pypi.org/project/selenium/) Selenium Pip install instructions and basic usage examples

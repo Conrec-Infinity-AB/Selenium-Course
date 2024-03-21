@@ -111,3 +111,6 @@ Example of the relative XPath
 Finding an element uniquely can sometimes be challenging. Usage of Selenium locators also requires a strategy to ensure that the tests are stable, fast and reliable.
 
 As an example on a page there can be a link with a name link text that appears 5 times and our Selenium code should click on the third link. If the web page then is modified and the same link text is added one more time in the second position then the click is using the wrong link text and the test will fail. So it is important to find the element uniquely.
+
+### Links ###
+[https://www.selenium.dev/documentation/webdriver/elements/locators/](https://www.selenium.dev/documentation/webdriver/elements/locators/)
