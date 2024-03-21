@@ -1,13 +1,179 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Selenium course - Test pages</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
+<html lang="en">
+<head>
+	<title>Selenium course - Test pages</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	* {
+	  box-sizing: border-box;
+	}
+	
+	body {
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	header {
+	  background-color: #000000;
+	  background-image: url(assets/conreclogo.png);
+	  background-repeat: no-repeat;
+	  background-size: contain;
+ 	  width: 100%;
+	  height:200px;  
+	  padding: 30px;
+	  text-align: right;
+	  font-size: 35px;
+	  color: white;
+	}
+	
+	/* Create two columns/boxes that floats next to each other */
+	nav {
+	  float: left;
+	  width: 10%;
+	  padding: 20px;
+	}
+	
+	/* Style the list inside the menu */
+	nav ul {
+	  list-style-type:circle;
+	  padding: 0;
+
+	  font-family: monospace;
+	  font-size: small;
+	}
+	
+	article {
+	  float: left;
+	  padding: 20px;
+	  width: 90%;
+	  height: 400px;  
+	  background-color: #f1f1f1;
+	}
+	
+	/* Clear floats after the columns */
+	section::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	footer {
+	  background-color: black;
+	  padding: 10px;
+	  text-align: center;
+	  color: white;
+	  vertical-align: bottom;
+	}
+
+	.button-link {
+  		text-decoration: none;
+	}
+
+	td.main-content {
+		width: 70%;
+		vertical-align: top;
+	}
+
+	h1 {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-weight: bolder;
+		font-size:xx-large;
+	}
+
+	p.text {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-weight: normal;
+		font-size: medium;
+	}
+
+	p.sub-header {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-weight: bolder;
+		font-size: medium;
+	}
+
+	td.iframe {
+		width: 30%;
+	}
+
+	.img-icon-search {
+   		width: 32px;
+		height: 32px;
+		vertical-align: middle;
+	}
+
+	.img-icon-hamburger {
+		width: 32px;
+		height: 32px;
+		vertical-align: middle;
+	}
+	
+	/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+	@media (max-width: 600px) {
+	  nav, article {
+		width: 100%;
+		height: auto;
+	  }
+	}
+	</style>  
+	<script>
+		function search() { document.getElementById("searchfield").value = "Let's search!"; }
+	</script>
 	</head>
 	<body>
-		Placeholder for the course test pages...
+	<header>
+	<span class="header-buttons">
+		<a href="signup.html" class="button-link">
+			<button class="btn-primary btn-small sign-up-button" title="Sign Up">Sign Up</button>
+		</a>
+		<a href="login.html" class="button-link">
+			<button class="btn-secondary btn-small login-button" title="Log In">Log In</button>
+		</a>
+	</span>	
+	<span class="header-icons">
+		<input type="text" id="searchfield" name="search">
+		<img src="assets/icon-search.png" title="Search" id="button-search" class="img-icon-search" onclick="search()"></img>
+		<!-- <img src="assets/icon-hamburger.png" title="Menu" id="button-hamburger-menu" class="img-icon-hamburger"></img> -->
+	</span>	
+	</header>
+	<section>
+	  <nav>
+		<ul>
+		  <li><a href="#">Who we are</a></li>
+		  <li><a href="#">Services</a></li>
+		  <li><a href="#">News</a></li>
+		  <li><a href="#">Contact us</a></li>
+		</ul>
+		<select>
+			<option>Who we are</option>
+			<option>Services</option>
+			<option>News</option>
+			<option>Contact us</option>
+			<option>Join Us</option>
+		</select>
+	  </nav>
+	  <article>
+		<table>
+			<tr>
+				<td class="main-content">		
+					<h1>What we do at Conrec Infinity</h1>
+					<p class="text">Sick of confusion, misunderstanding and not achieving desired results?</p>
+					<p class="text">If you, like us, recognize yourself in the above and believe that many misunderstandings could be avoided through clearer communication then we’re on the same wavelength.</p>	
+					<p class="sub-header">How do we achieve clear communication?</p>
+					<p class="text">Conrec’s solution is combining the best of both worlds – IT and Communication!</p>
+				</td>
+				<td class="iframe">
+					<p><iframe src="iframe.html" width="400px" height="300px" title="The iFrame" style="border:1px solid gold;"></iframe></p>
+				</td>
+			</tr>
+	</table>
 
-		Lets make a change to the page and see if we need to build / deploy page with github actions?
+	</article>
+	</section>
+	
+	<footer>
+	  <p>Footer</p>
+	</footer>
+	
 	</body>
-</html>
+	</html>
