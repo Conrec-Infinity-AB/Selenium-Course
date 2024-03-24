@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Meetings iframe content</title>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+</head>
+<h1>This is inside the iframe</h1>
+<body>
+<div class="iframe_content" id="iframe_content">
+<div class="row">
+  <div class="col-4">
+	<input type="button" class="iframe_button" id="iframe_button" value="A Button" onClick="alert('Hello!')">
+  </div>
+  <div class="col-4">
+	<label>
+	<input type="radio" name="RadioGroup" value="Radio1" id="Radio1"> Radio button1
+	</label>
+	<label>
+	<input type="radio" name="RadioGroup" value="Radio2" id="Radio2"> Radio button2
+	</label>
+</div>
+ <div class="col-4">
+	<label>
+	<input type="checkbox" name="CheckGroup" value="Check1" id="Check1"> Checkbox 1
+	</label>
+	<label>
+	<input type="checkbox" name="CheckGroup" value="Check2" id="Check2">Checkbox 2
+	</label></div>
+</div>
+<div class="row">
+  <div class="col-4"><a href="https://www.wikipedia.org" target="_self">Open Wikipedia in frame</a></div>
+  <div class="col-4"><a href="https://www.wikipedia.org" target="_parent">Open Wikipedia in parent frame</a></div>
+  <div class="col-4">
+	  <ul class="list-group" id="iframe_listgroup">
+		  <li class="list-group-item-danger" id="iframe_listvalue1">List value 1</li>
+		  <li class="list-group-item-success" id="iframe_listvalue1">List value 2</li>
+	  </ul>
+	</div>
+  </div>
+</p>
+</div>
+</div>
+</body>
+</html>
