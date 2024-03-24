@@ -1,181 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Selenium course - Test pages</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	* {
-	  box-sizing: border-box;
-	}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Example - Selenium Course</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12">
+			<img src="images/Banner_small.png">
+			<h1 class="text-center">Selenium Course test page</h1>
+		  </div>
+      </div>
 	
-	body {
-	  font-family: Arial, Helvetica, sans-serif;
-	}
-	
-	header {
-	  background-color: #000000;
-	  background-image: url(assets/conreclogo.png);
-	  background-repeat: no-repeat;
-	  background-size: contain;
- 	  width: 100%;
-	  height:200px;  
-	  padding: 30px;
-	  text-align: right;
-	  font-size: 35px;
-	  color: white;
-	}
-	
-	/* Create two columns/boxes that floats next to each other */
-	nav {
-	  float: left;
-	  width: 10%;
-	  padding: 20px;
-	}
-	
-	/* Style the list inside the menu */
-	nav ul {
-	  list-style-type:circle;
-	  padding: 0;
-
-	  font-family: monospace;
-	  font-size: small;
-	}
-	
-	article {
-	  float: left;
-	  padding: 20px;
-	  width: 90%;
-	  height: 400px;  
-	  background-color: #f1f1f1;
-	}
-	
-	/* Clear floats after the columns */
-	section::after {
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
-
-	footer {
-	  background-color: black;
-	  padding: 10px;
-	  text-align: center;
-	  color: white;
-	  vertical-align: bottom;
-	}
-
-	.button-link {
-  		text-decoration: none;
-	}
-
-	td.main-content {
-		width: 70%;
-		vertical-align: top;
-	}
-
-	h1 {
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
-		font-weight: bolder;
-		font-size:xx-large;
-	}
-
-	p.text {
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
-		font-weight: normal;
-		font-size: medium;
-	}
-
-	p.sub-header {
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
-		font-weight: bolder;
-		font-size: medium;
-	}
-
-	td.iframe {
-		width: 30%;
-	}
-
-	.img-icon-search {
-   		width: 32px;
-		height: 32px;
-		vertical-align: middle;
-	}
-
-	.img-icon-hamburger {
-		width: 32px;
-		height: 32px;
-		vertical-align: middle;
-	}
-	
-	/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-	@media (max-width: 600px) {
-	  nav, article {
-		width: 100%;
-		height: auto;
-	  }
-	}
-	</style>  
-	<script>
-		function search() { document.getElementById("searchfield").value = "Let's search!"; }
-	</script>
-	</head>
-	<body>
-	<header>
-	<span class="header-buttons">
-		<a href="signup.html" class="button-link">
-			<button class="btn-primary btn-small sign-up-button" title="Sign Up">Sign Up</button>
-		</a>
-		<a href="login.html" class="button-link">
-			<button class="btn-secondary btn-small login-button" title="Log In">Log In</button>
-		</a>
-	</span>	
-	<span class="header-icons">
-		<input type="text" id="searchfield" name="search">
-		<img src="assets/icon-search.png" title="Search" id="button-search" class="img-icon-search" onclick="search()"></img>
-		<!-- <img src="assets/icon-hamburger.png" title="Menu" id="button-hamburger-menu" class="img-icon-hamburger"></img> -->
-	</span>	
-	<p>Selenium Test Page</p>
-		
-</header>
-	<section>
-	  <nav>
-		<ul>
-		  <li><a href="#">Who we are</a></li>
-		  <li><a href="#">Services</a></li>
-		  <li><a href="#">News</a></li>
-		  <li><a href="#">Contact us</a></li>
-		</ul>
-		<select>
-			<option>Who we are</option>
-			<option>Services</option>
-			<option>News</option>
-			<option>Contact us</option>
-			<option>Join Us</option>
-		</select>
-	  </nav>
-	  <article>
-		<table>
-			<tr>
-				<td class="main-content">		
-					<h1>What we do at Conrec Infinity</h1>
-					<p class="text">Sick of confusion, misunderstanding and not achieving desired results?</p>
-					<p class="text">If you, like us, recognize yourself in the above and believe that many misunderstandings could be avoided through clearer communication then we’re on the same wavelength.</p>	
-					<p class="sub-header">How do we achieve clear communication?</p>
-					<p class="text">Conrec’s solution is combining the best of both worlds – IT and Communication!</p>
-				</td>
-				<td class="iframe">
-					<p><iframe src="iframe.html" width="400px" height="300px" title="The iFrame" style="border:1px solid gray;"></iframe></p>
-				</td>
-			</tr>
-	</table>
-
-	</article>
-	</section>
-	
-	<footer>
-	  <p>Footer</p>
-	</footer>
-	
-	</body>
-	</html>
+      <hr>
+    </div>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3 rounded-circle" src="images/books.png" alt="Get a certificate" width="100px", height="100px">
+                <div class="media-body ">
+                  <h5 class="mt-0 mb-1">Certificates</h5>
+                  <p class="mb-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                </div>
+				</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <ul class="list-unstyled">
+              <li class="media">
+	           <img class="mr-3 rounded-circle" src="images/lunch.png" alt="Where to lunch" width="100px", height="100px">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Where to lunch</h5>
+                  <p class="mb-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                </div>				  
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 d-md-none d-lg-block">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3 rounded-circle" src="images/beer.png" alt="After work" width="100px", height="100px">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Go on an After Work</h5>
+                  <p class="mb-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-12">
+          <div class="row">
+            <div class="col-sm-6 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/meeting.png" alt="Meetings">
+                <div class="card-body">
+                  <h5 class="card-title">Meetings</h5>
+                  <p class="card-text">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                  <a href="#" class="btn btn-primary">More info...</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/chart1.png" alt="How it is going">
+                <div class="card-body">
+                  <h5 class="card-title">Company info</h5>
+                  <p class="card-text">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                  <a href="#" class="btn btn-primary">More info...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/aboutus.png" alt="Get to know our company">
+                <div class="card-body">
+                  <h5 class="card-title">About us</h5>
+                  <p class="card-text">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                  <a href="#" class="btn btn-primary">More info...</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="card">
+                <img class="card-img-top" src="images/Network1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Our network</h5>
+                  <p class="card-text">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                  <a href="#" class="btn btn-primary">More info...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="col-lg-4 col-12">
+          <div class="row mx-0">
+            <div class="col-12 card bg-light mx-auto">
+              <h3 class="text-center card-header">Find an Office</h3>
+              <form class="card-body">
+                <div class="form-group row">
+                  <label for="location" class="col-form-label">Location</label>
+                  <select class="form-control" name="location" id="location">
+                    <option value="">All</option>
+                    <option value="">Sweden - Malmö</option>
+                    <option value="">Sweden - Karlskrona</option>
+					<option value="">Sweden - Jönköping</option>
+					<option value="">Bosnia - Sarajevo</option>
+                  </select>
+                </div>
+                <div class="form-group row">
+                  <label for="contact" class="col-form-label">Contact</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="Contact" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="form-group row">
+			  	<label for="role" class="col-form-label">Role(s)</label>	
+                <select class="form-control" name="role" id="role" multiple>
+                    <option value="">Sweden - Malmö</option>
+                    <option value="">Sweden - Karlskrona</option>
+					<option value="">Sweden - Jönköping</option>
+					<option value="">Bosnia - Sarajevo</option>
+                  </select>
+                </div>
+                <p class="text-center"><a href="#" class="btn btn-danger" role="button">Search </a></p>
+              </form>
+            </div>
+            <div class="col-12">
+              <h3 class="text-center">Contact info</h3>
+              <hr>
+              <div class="media">
+                <img class="mr-3" src="images/persona1_64px.png" alt="Contact head office">
+                <div class="media-body">
+                  <h5 class="mt-0">Pepper Potts</h5>
+                  <abbr title="Phone">P:</abbr> (123) 456-7890 <a href="mailto:#">pepper.potts@example.com</a>
+                </div>
+              </div>
+              <div class="media mt-2">
+                <img class="mr-3" src="images/persona2_64px.png" alt="Contact Sales">
+                <div class="media-body">
+                  <h5 class="mt-0">Tony Stark</h5>
+                  <abbr title="Phone">P:</abbr> (123) 456-7891 <a href="mailto:#">tony.stark@example.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <h3>New employees</h3>
+            <hr>
+            <div class="row">
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona3_72px.png" alt="Joe Alen"> </div>
+              </div>
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona5_72px.png" alt="Sue-Ellen Ewing"></div>
+              </div>
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona6_72px.png" alt="Halle Berry"></div>
+            	</div>
+			 </div>
+            <hr>
+            <div class="row">
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona7_72px.png" alt="Elon Husk"></div>
+              </div>
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona8_72px.png" alt="Jane Kwift"></div>
+              </div>
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona9_72px.png" alt="Ana Jensen"></div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona10_72px.png" alt="Chris Hemswirth"></div>
+              </div>
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona12_72px.png" alt="Sally Belly"></div>
+              </div>
+              <div class="col-4">
+                <div class="text-center"> <img src="images/persona11_72px.png" alt="Tom Halland"></div>
+              </div>
+            </div>
+	        <hr>
+          </div>
+          <div class="col-md-6 col-12">
+            <h3>Our Services</h3>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Consulting</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Recruitment</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Expertice</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <p class="text-center mt-2"><img src="images/whatwedo1.png" alt=""></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus maxime aut ea impedit voluptates aperiam dolor laborum officiis autem aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, alias, repudiandae sunt illo consequatur aperiam doloribus nesciunt ut deserunt ipsa est tempora nihil. Totam eveniet aperiam debitis fugit ipsa doloremque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sequi dolorem suscipit assumenda molestiae voluptatem qui consequuntur magni? Deleniti, corporis.</p>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <p class="text-center mt-2"><img src="images/whatwedo3.png" alt=""></p>
+                <p>Mauris lacinia, diam eu ultricies pretium, ipsum nunc placerat metus, vel consequat neque dui sed diam. Etiam quis ipsum volutpat, fringilla neque vitae, volutpat justo. Suspendisse consectetur mollis nunc eu rhoncus. Cras porttitor fermentum ipsum, imperdiet aliquet dui sodales id. Nam tincidunt, neque sed volutpat fermentum, quam nunc dictum magna, non porta libero felis quis augue. Vestibulum suscipit, libero posuere pharetra viverra, nibh enim pretium eros, et viverra diam nunc ac eros. Quisque vestibulum lorem risus, a eleifend urna egestas ultrices.</p>
+              </div>
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <p class="text-center mt-2"><img src="images/whatwedo2.png" alt=""></p>
+                <p>Pellentesque in arcu tincidunt odio laoreet placerat. Donec dignissim faucibus justo interdum tempor. Donec luctus sem in augue mollis varius. Aliquam suscipit mi ultricies eros aliquam elementum. Nam viverra augue eget metus consequat tempus. Aliquam posuere bibendum efficitur. Nunc est purus, cursus a elit ac, hendrerit fermentum nisl. Integer felis lectus, faucibus quis magna ut, lobortis ullamcorper dolor. Duis laoreet ipsum ligula, a tristique metus feugiat vitae.Nunc aliquam enim at nulla pellentesque dapibus at id quam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-12">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <h3>About Us</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur neque exercitationem distinctio esse! Cupiditate doloribus a consequatur iusto illum eos facere vel iste iure maxime. Velit, rem, sunt obcaecati eveniet id nemo molestiae. In.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, consequatur neque exercitationem distinctio esse! Cupiditate doloribus a consequatur iusto illum eos facere vel iste iure maxime. Velit, rem, sunt obcaecati eveniet id nemo molestiae. In.</p>
+            </div>
+            <div class="col-lg-6 col-12">
+              <h3>Latest News</h3>
+              <hr>
+              <div>
+            <div class="media">
+              <div class="media-body">
+                <h4 class="mt-0 mb-1">Malmö Office</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, quod temporibus veniam deserunt deleniti accusamus voluptatibus at illo sunt quisquam. </div>
+              <a href="#"><img class="ml-3" src="images/malmo.png" alt="placeholder image"></a> </div>
+            <div class="media">
+              <div class="media-body">
+                <h4 class="mt-0 mb-1">Sarajevo Office</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, iure nemo earum quae aliquid animi eligendi rerum rem porro facilis. </div>
+              <a href="#"><img class="ml-3" src="images/sarajevo.png" alt="placeholder image"></a> </div>
+          </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mt-md-0 mt-2">
+          <h3>Contact Us</h3>
+          <hr>
+          <address>
+            <strong>RecCon</strong><br>
+            Sommargatan 5<br>
+            222 44 Malmö<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+          </address>
+          <address>
+            <strong>Gunnar Nilsson</strong><br>
+            <a href="mailto:#">gunnar.nilsson@example.com</a>
+          </address>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © RecCon. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
