@@ -1,27 +1,86 @@
-## Browser window ##
+# Browser interactions #
+
+## Browsers navigation ##
+Go to an URL in the browser opened for the WebDriver session 
+> driver.get("URL")
+
+Get the active browser tab / window URL
+> driver.current_url
+
+Get the active browser tab / window title
+> driver.title
+
+Sets the amount of time to wait for a page load to complete before throwing an error. Default value is 300 seconds.
+> driver.set_page_load_timeout(30) 
+
+If you have followed one or more links in the current tab or browser, then its possible to navigate back  
+> driver.back()
+
+The same applies if you have navigated back and want to go forward again
+> driver.forward()
+
+If we need to refresh the current page we can do that too
+> driver.refresh()
+
+It is possible to save the current page rendered HTML to an object or file, just save the output to an variable and then use it in the code.  
+> driver.page_source
+
+## Browser window sizes ##
+
+Maximaize the browser window 
 > driver.maximize_window()
+
+Minimize the window
 > driver.minimize_window()
+
+Set window to full screen
 > driver.fullscreen_window()
 
 Get the window dimension
 > size = driver.get_window_size()
+
 > width = driver.get_window_size().get("width")
+
 > height = driver.get_window_size().get("height")
 
 Set the browser window size. Note it does not change the screen resolution
 > driver.set_window_size(1024, 768)
 
-get window dimensions
+Get window positions (x, y values)
 > position = driver.get_window_position()
+
 > xPos = driver.get_window_position().get('x')
+
 > yPos = driver.get_window_position().get('y')
 
 Move the window to a specific position on the primary monitor
 > driver.set_window_position(x, y)
 
-Returns and base64 encoded string into image
-> driver.save_screenshot('./image.png')
+## Screenshots ##
+Its possible to take screenshots of the browser, both the full browser window but also on individual elements
 
+Take a browser screenshot. The fuction saves the screenshot as an .PNG file
+> driver.save_screenshot('browser_screenshot.png')
+
+And on a specific element which is visible
+> element.screenshot('element_screenshot.png')  
+
+## Cookies ##
+Get all cookies used on the tested page. Returns an dictionary with names and values
+> driver.get_cookies()
+
+Print the cookies
+> for cookie in driver.get_cookies():  
+>       print(cookie)
+
+Add a cookie by giving it a name and a dictionaty of name and key values 
+> driver.add_cookie({'name': 'CookieName', 'value': 'CookieValue'})
+
+## Executing Javascript ##
+It is possible to interact with the browser with Javascript and also modify the DOM tree if needed
+
+For example to open a new window with Javascript
+> driver.execute_script('window.open();')
 
 ## Alerts ##
 Many times developers builds their own alerts by using popup windows/modals, then these alert commands does not work. Instead we have to handle the popup as a web page and find the buttons and field to interact with.
