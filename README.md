@@ -87,3 +87,16 @@ Open the file **_./Lecture1/code/1_openingPage.py_** and run it by selecting **_
 The text below should be visible in Viual Studio Code terminal:
 
 > Title is: Home Page
+
+## Links ##
+- [Our test site online](https://conrec-infinity-ab.github.io/Selenium-Course) This is hosted on Githubs pages. Will be redeployed every time we check in code in this repos ./docs folder. This is the site we will run our test on.
+- [Our test site offline](http://127.0.0.1:5500/docs/index.html) Use the extension Live Server and start index.html page in the ./docs folder. Use this one if you are offline or want to test changes locally before commiting to the repository. 
+- [Selenium documentation](https://www.selenium.dev/documentation/) Everything related to Selenium APi and Grid and more
+- [Python language bindings for Selenium WebDriver](https://www.selenium.dev/selenium/docs/api/py/api.html#) Python bindings for Selenium 4
+- [Python documentation](https://docs.python.org/3/) Everything related to the Python language 
+- [Python Package Index](https://pypi.org) The repository for Python packages which can be imported, including instructions how to install them with the **_pip_** command
+- [Selenium Package](https://pypi.org/project/selenium/) Selenium Pip install instructions and basic usage examples
+- [Virtual environments](https://docs.python.org/3/library/venv.html) How to setup and use virtual environments in Python 
+- [Google DevTools](https://developer.chrome.com/docs/devtools) Googles developer tool used in Chrome webbrowser. A tool you should be comfortable with when writing Selenium tests
+- [Softwaretestingboard](https://magento.softwaretestingboard.com) A site which can be used for tests 
+- [Saucedemo](https://www.saucedemo.com/) Another site which can be used for running tests against 

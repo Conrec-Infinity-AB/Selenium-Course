@@ -1,5 +1,5 @@
 # Browser interactions #
-
+For the 
 ## Browsers navigation ##
 Go to an URL in the browser opened for the WebDriver session 
 > driver.get("URL")
