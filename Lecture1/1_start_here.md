@@ -39,7 +39,7 @@ project
 <p style="color:yellow">NOTE: Always use GIT pull before every lecture, because the repository is updated every now and then!</p>
 
 ## Links ##
-- [Our test site online](https://conrec-infinity-ab.github.io/Selenium-Course) This is hosted on Githubs pages. Will be redeployed every time we check in code in this repos ./docs folder. This is the site we will run our test on.
+- [Our test site online](https://conrec-infinity-ab.github.io/Selenium-Course) This is hosted on Githubs pages. Will be redeployed every time we check in code in this repository. This is the site we will run our test on.
 - [Our test site offline](http://127.0.0.1:5500/docs/index.html) Use the extension Live Server and start index.html page in the ./docs folder. Use this one if you are offline or want to test changes locally before commiting to the repository. 
 - [Selenium documentation](https://www.selenium.dev/documentation/) Everything related to Selenium APi and Grid and more
 - [Python language bindings for Selenium WebDriver](https://www.selenium.dev/selenium/docs/api/py/api.html#) Python bindings for Selenium 4
