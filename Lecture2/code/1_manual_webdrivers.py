@@ -26,6 +26,6 @@ driver = webdriver.Chrome(service=chrome_obj)
 #driver = webdriver.Firefox(service=firefox_obj)
 
 # Test driver by opening a page
-driver.get("https://magento.softwaretestingboard.com")
+driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
 
 driver.quit()

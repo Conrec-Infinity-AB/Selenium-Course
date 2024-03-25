@@ -1,6 +1,7 @@
 # More detailed example for webdriver-manager. See documentation at https://pypi.org/project/webdriver-manager/
 
 from selenium import webdriver
+from time import sleep
 
 # By default, all driver binaries are saved to user.home/.wdm folder. You can override this setting and save binaries to project.root/.wdm.
 # import os
@@ -21,6 +22,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 # Its possible to specify the version of webdriver in case a specific version is needed
 # driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager(driver_version="119.0").install()))
 
-driver.get("https://magento.softwaretestingboard.com")
+driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
 
+sleep(3)
 driver.quit()

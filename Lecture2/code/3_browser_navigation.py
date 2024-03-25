@@ -7,7 +7,7 @@ from time import sleep
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-driver.get("http://127.0.0.1:5500/docs/index.html")
+driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
 
 # get the current URL and page title
 currentURL = driver.current_url

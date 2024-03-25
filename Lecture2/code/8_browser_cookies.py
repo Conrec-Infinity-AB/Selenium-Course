@@ -8,17 +8,20 @@ from datetime import datetime
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-driver.get("http://127.0.0.1:5500/docs/index.html")
+driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
 
 # Get all cookies
 cookies = driver.get_cookies()
 
 # Print the cookies. In our example there will not be any set
+print("Cookies set in site?")
 for cookie in cookies:
     print(cookie)
 
+print("\nDone checking cookies...\n\n")
 # So let us set some cookies, using dictionaries
 
+print("Cookies set in site?")
 driver.add_cookie({'name': 'Selenium_text', 'value': 'This is the first cookie'})    
 
 # get the current date and time and set the fomrat as a string so we can use it in a cookie
@@ -31,5 +34,7 @@ cookies = driver.get_cookies()
 # Print the cookies again. Now there should be two of them
 for cookie in cookies:
     print(cookie)
+
+print("\nDone checking cookies...\n\n")
 
 driver.quit()
