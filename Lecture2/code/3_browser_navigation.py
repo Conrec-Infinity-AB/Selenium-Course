@@ -15,11 +15,6 @@ pageTitle = driver.title
 print("Current URL is:" + currentURL)
 print("Page title is: " + pageTitle)
 
-# The default time out for loading a page is 300 sec. We might not want to wait that long before continuing our tests. Set a really short time for this example
-#driver.set_page_load_timeout(2) 
-# Try load a page which is slow (I do not have any good examples... But lowering time to really short helps)
-#driver.get("https://www.smithfieldfoods.com/")
-
 # Open a link in the current tab and then go back 
 # First wait some so see that the index page has loaded and then lets click on the Certificate image which is also a link
 sleep(2)

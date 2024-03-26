@@ -17,5 +17,8 @@ sleep(3)
 # Execute some Javascript to open a window 
 driver.execute_script('window.open();')
 
+# It is also possible to execute async scripts
+# driver.execute_async_script('async_script()')
+
 sleep(3)
 driver.quit()
