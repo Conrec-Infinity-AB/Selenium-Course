@@ -14,26 +14,19 @@ driver.set_page_load_timeout(10)
 driver.set_network_conditions(offline = False, latency = 50, download_throughput = 100 * 1024, upload_throughput = 100 * 1024, )
 
 # Get the current network conditions
-print (driver.get_network_conditions())
+print(driver.get_network_conditions())
 
 # Will load very slow
 driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
-
-sleep(5)
+sleep(3)
 
 # Delete our custom config
-driver.delete_network_conditions() 
+#driver.delete_network_conditions() 
 # print(driver.get_network_conditions()) # Error because custom config is deleted
 
 # Should load fast now
-driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/aboutus.html")
+#driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/aboutus.html")
 
 
-# Implicit waits
-
-
-# Explicit waits
-
-
-sleep(5)
+sleep(3)
 driver.quit()

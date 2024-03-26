@@ -37,7 +37,9 @@ Setting explicit waits involves two objects:
 *   A WebDriverWait
 *   An expected condition
 
-Selenium provides a number of methods for expected conditions.
+Selenium provides a number of methods for expected conditions, below are some examples. More info at:  
+https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html
+
 *   title_is
 *   visibility_of_element_located
 *   element_to_be_clickable
@@ -47,7 +49,7 @@ Selenium provides a number of methods for expected conditions.
 > from selenium.common.exceptions import ElementNotVisibleException
 
 Explicit wait for element
-https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html
+
 > element = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, 'my-id')))
 
 Compared to code without wait
