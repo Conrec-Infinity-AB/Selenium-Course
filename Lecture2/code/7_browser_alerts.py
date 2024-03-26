@@ -8,10 +8,9 @@ from time import sleep
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-#driver.get("https://conrec-infinity-ab.github.io/Selenium-Course") 
-driver.get("http://127.0.0.1:5500/docs/companyinfo.html") # TODO change to online site when deployed
+driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/companyinfo.html") 
 
-#sleep(1)
+sleep(1)
 
 # 1. Alert button. Find the button and click it to open the first alert
 button = driver.find_element(By.ID, "alert_button")
