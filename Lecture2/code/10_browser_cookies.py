@@ -61,6 +61,4 @@ for cookie in cookies:
 
 print("\nDone checking cookies...\n\n")
 
-
-
 driver.quit()
