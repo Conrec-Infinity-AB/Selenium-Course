@@ -65,7 +65,8 @@
 	<div class="row">
 	<div class="container">
 		<section id="alerts">
-      <div><h4>Alerts</h4></div>
+      <div><h4>Buttons &amp; Alerts</h4>
+      </div>
       <div class="row">
       <div class="col-4">
       <input type="button" class="alert_button" id="alert_button" value="Open Alert" onClick="alert('An alert')">
@@ -77,27 +78,86 @@
       <input type="button" class="prompt_button" id="prompt_button" value="Open Prompt alert" onClick="promptButton()">
       <div class="prompt_text" id="prompt_text">Output: </div>
     </div>
+	</div>
+  <hr>
+	<div class="row">
+	<div class="container">
+	<section id="dropdowns">
+      <div><h4>Dropdowns &amp; Radio/Checkboxes</h4>
+      </div>
+      <div class="row">
+      <div class="col-4">
+		<label for="dropdown_persons"><b>Select a person:</b></label>
+		<br>
+		<select id="dropdown_persons" name="Persons">
+		  <option value="ChrisHemswirth">Chris Hemswirth</option>
+		  <option value="ElonHusk">Elon Husk</option>
+		  <option value="HallePerry">Halle Perry</option>
+		  <option value="TomHalland">Tom Halland</option>
+		</select>
+	    </div>
+      <div class="col-4">
+        <p>
+          <label>
+            <input type="radio" name="RadioPersons" value="LadyNaggar" id="RadioPersons_0"> Lady Naggar</label>
+          <br>
+          <label>
+            <input type="radio" name="RadioPersons" value="Pepper Motts" id="RadioPersons_1"> Pepper Motts</label>
+          <br>
+		  <label>
+            <input type="radio" name="RadioPersons" value="SueEllenSewing" id="RadioPersons_2"> Sue-Ellen Sewing</label>
+          <br>	
+        </p>
+      </div>
+     <div class="col-4">
+       <p>
+         <label>
+           <input type="checkbox" name="CheckboxPersons" value="Sadele" id="CheckboxPersons_0"> Sadele</label>
+         <br>
+         <label>
+           <input type="checkbox" name="CheckboxPersons" value="TaylorKwift" id="CheckboxPersons_1"> Taylor Kwift</label>
+         <br>
+         <label>
+           <input type="checkbox" name="CheckboxPersons" value="TomHalland" id="CheckboxPersons_2" disabled> Tom Halland</label>
+         <br>
+       </p>
+     </div>
+		</div>
 		</section>
 	</div>
 	</div>
   <hr>
 	<div class="row">
 	<div class="container">
-		<section id="radiobuttons">
-      <div><h4>Radio/Checkboxes</h4></div>
+	<section id="textfields">
+      <div><h4>Textfields</h4>
+      </div>
       <div class="row">
       <div class="col-4">
-ddd      </div>
+		  <label>Enter a text</label> 
+		  <br>
+		  <input type="text" placeholder="Default text">
+	  </div>
       <div class="col-4">
-eee
-    </div>
+		 <label>Enter a text</label>
+		  <br>
+		<textarea cols="40" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo laoreet sit amet cursus sit amet dictum. Vitae auctor eu augue ut lectus arcu bibendum at varius. Fringilla urna porttitor rhoncus dolor purus non enim. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Sed viverra tellus in hac habitasse. Ut pharetra sit amet aliquam. Et tortor consequat id porta. Egestas pretium aenean pharetra magna ac. Libero enim sed faucibus turpis in eu. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Semper eget duis at tellus. Est ultricies integer quis auctor elit sed vulputate mi sit.</textarea>
+	</div>
      <div class="col-4">
- ff
-   </div>
+		<ul>
+			<li>Lady Naggar</li>
+			<li>Pepper Motts</li>
+			<li>Sue-Ellen Sewing</li>
+		</ul>
+		  </div>
+		</div>
 		</section>
 	</div>
 	</div>
-  <hr>
+  <hr>			
+			
+			
+			
 	<div class="container">
   <div class="row">
         <div class="col-md-8 col-12">
