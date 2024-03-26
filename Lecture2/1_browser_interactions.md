@@ -164,7 +164,7 @@ Opens a new window and switches to new window
 Close the tab or window
 > driver.close()
 
-Switch back to the old tab or window.
+We need to use windows handles to switch between any tabs or windows. Switch back to the old tab or window.
 Always switch back to original tab or window or webdriver will try to execute commands on the closed tab/window
 > driver.switch_to.window(saved_handle)
 
