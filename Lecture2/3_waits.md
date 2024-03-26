@@ -19,7 +19,7 @@ Delete our custom netork config
 ### Implicit waits ###
 Implicit waits are used when we need to set the maximum waiting time for finding elements in a browser session. This is not the preferred way to wait for elements but can be useful if we know the infrastructure and network conditions are good. 
 
-You can set implicit waits with the implicitly_wait(seconds)
+You can set implicit waits with the implicitly_wait(seconds). The default value is 0.
 
 Waits up to 30 seconds to find elements. After that the WebDriver will fail to find the element.
 > driver.implicitly_wait(30) 
