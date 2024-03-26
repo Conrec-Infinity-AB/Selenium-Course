@@ -94,14 +94,14 @@ The second one is for asking questions where you can respond with Cancel or OK.
 The third one is used when we need the user to enter som repsone text. It also uses Cancel and OK buttons.
 > \<input type="button" onClick="prompt('An alert with inputbox and Cancel & OK buttons','Pre-filled text')"\>
 
-### Note ###
+### Notes about custom alerts ###
 Many times developers builds their own alerts by using popup windows/modals, then these alert commands does not work. Instead we have to handle the popup as a web page and find the buttons and field to interact with.
 
 To interact with an alert we first need to switch to its context or we will not be able to interact with the alert.
 > alert = driver.switch_to.alert
 
 If we import below then we can use Alert(driver) instead of driver.switch_to.alert
-> from selenium.webdriver.common.alert import Alert
+> from selenium.webdriver.common.alert import Alert  
 > alert = Alert(driver)
 
 To interact with the alert we can use either to click the OK button
@@ -117,33 +117,34 @@ And to enter some inputs in a prompt we use the .sendKeys() method. Note The tex
 > alert.sendKeys("The text to enter in a prompt")
 
 ## IFrames ##
-Page Navigation
 Frames or iFrames loads other HTML pages inside a web page.  
-Elements inside an iFrame can't be selected directly with Selenium, instead, you have to switch from the main HTML into the iframe.
+Elements inside an iFrame can't be selected directly with Selenium, instead you have to switch from the main HTML into the iframe.
 
-Same problem in reverse - the main HTML is not accessible within the iFrame
+Same problem in reverse, elements in the main HTML is not accessible within the iFrame.
 
-So we need to do some steps to find an element in an iFrame: 
+### Finding an element in an iFrame ### 
 
-Switch to Frame
-> driver.switch_to.frame(iframe_element)
+There are multiple ways to switch to an iframe  
+By using then "name" tag  
+> driver.switch_to.frame("frame_name")
 
-Find element of interest within iFrame
+Use the index, first iframe is 0  
+> driver.switch_to.frame(index)
+
+By finding the iframe element using ID, TAG_NAME, CLASS_name and so on  
+> driver.switch_to.frame(driver.find_element(By.ID, "meeting_iframe"))
+
+By searching for all iframe tags and use the index for the returned iframe list  
+> driver.switch_to.frame(driver.find_elements(By.TAG_NAME, "iframe")[0])
+
+The we can fiind the element(s) in the iframe which we are interrested in 
 > driver.find_element(element_to_find)
 
-Switch back to main (parent) HTML 
+Then we need to switch back to main frame (highest level)  
 > driver.switch_to.default_content()
 
-A page can include multiple iframes and it is possible to switch to an iframe in two ways:
-Switch iframe by its id/class and so on
-> iframe = driver.find_element(By.ID, "content_frame")
-
-> driver.switch_to.frame(iframe)
-
-Switching to an iframe based on its index
-> iframe = driver.find_elements(By.TAG_NAME,'iframe')[1]
-
-> driver.switch_to.frame(iframe)
+Or by going up one level in the frame hierarchy  
+> driver.switch_to.parent_frame()
 
 ## Windows and tabs ##
 WebDriver does not make any distinction between windows and tabs. When we are testing web pages where we have multiple browsers or tabs we need to change focus to the window we want to interact with.
