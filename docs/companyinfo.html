@@ -7,6 +7,18 @@
     <title>Selenium Course - Certificates</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <script>
+      function promptButton() {
+        let text;
+        let name = prompt("Please enter your name:", "Peps Persson");
+        if (name == null || name == "") {
+          text = "Output: User cancelled";
+        } else {
+          text = "Output: " + name;
+        }
+        document.getElementById("prompt_text").innerHTML = text;
+      }
+      </script>
   </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -52,14 +64,40 @@
 <hr>
 	<div class="row">
 	<div class="container">
-		<section id="companyinfok">
-			<div class="col-12">
-			Content for Comapny Info page
-			</div>
+		<section id="alerts">
+      <div><h4>Alerts</h4></div>
+      <div class="row">
+      <div class="col-4">
+      <input type="button" class="alert_button" id="alert_button" value="Open Alert" onClick="alert('An alert')">
+      </div>
+      <div class="col-4">
+        <input type="button" class="confirm_button" id="confirm_button" value="Open Confirm alert" onClick="confirm('An alert with Cancel & OK buttons')">
+    </div>
+     <div class="col-4">
+      <input type="button" class="prompt_button" id="prompt_button" value="Open Prompt alert" onClick="promptButton()">
+      <div class="prompt_text" id="prompt_text">Output: </div>
+    </div>
 		</section>
 	</div>
 	</div>
-<hr>
+  <hr>
+	<div class="row">
+	<div class="container">
+		<section id="radiobuttons">
+      <div><h4>Radio/Checkboxes</h4></div>
+      <div class="row">
+      <div class="col-4">
+ddd      </div>
+      <div class="col-4">
+eee
+    </div>
+     <div class="col-4">
+ ff
+   </div>
+		</section>
+	</div>
+	</div>
+  <hr>
 	<div class="container">
   <div class="row">
         <div class="col-md-8 col-12">
