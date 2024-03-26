@@ -49,3 +49,4 @@ Check if the element is displayed in the viewable browser context. If the elemen
 
 Check if the element is selected or not. Uually for Check boxes, radio buttons, input elements, and option elements.
 > element.isSelected()
+
