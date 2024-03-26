@@ -8,8 +8,7 @@ from time import sleep
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-#driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/companyinfo.html")
-driver.get("http://127.0.0.1:5500/docs/companyinfo.html")
+driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/companyinfo.html")
 
 # Dropdown example
 # Find the Dropdown element
