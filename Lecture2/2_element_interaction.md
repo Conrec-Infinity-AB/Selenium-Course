@@ -6,17 +6,12 @@ When we have found an element in the web page we have some commands to use for i
 
 > element.sendKeys("") 
 
-
-
-
 > element.clear()
 
-# Using key combinations
+## Using key combinations
 
 
-
-
-
+## Get text and info for an element ## 
 Get the text of the element
 > element.text
 
@@ -26,18 +21,17 @@ Get the tag name of the element a selected element
 Returns height, width, x and y coordinates
 > element.text.rect
 
-## Fetching properties and attribues of an element
 Get the value of a CSS property for an element 
 > element.getAttribute("type")
 
-Get the 
+Get the property of an element 
 > element.getproperty()
 
 Get the value of a CSS property for an element 
 > element.value_of_css_property('background-color')
 
 
-
+## Check state of an element
 > element.isEnabled()
 
 > element.isDisplayed()
