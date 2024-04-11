@@ -30,13 +30,12 @@ function readStorageLoginPassword() {
 
 function submitLogin() {
     setStorageLogin();
-
     
-    let redirectURL = "http://" + window.location.hostname + window.location.pathname;
+    let redirectURL = "http://" + window.location.hostname + window.location.pathname + "/signin.html";
     window.location.replace(redirectURL);
 
     // Debug
-    alert(redirectURL);
+    //alert(redirectURL);
 }
 
 function promptButton() {
