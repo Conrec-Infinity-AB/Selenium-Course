@@ -7,21 +7,28 @@
     <title>Selenium Course - Company Info</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="css/conrec.css" rel="stylesheet">
    </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">Test Site</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 navbar-email" id="navbarEmail" type="email" placeholder="UserName" aria-label="Username">
-        <input class="form-control mr-sm-2 navbar-password" id="navbarPassword" type="password" placeholder="Password" aria-label="Password">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="submitLogin()">Login</button>
-      </form>
-    </div>
-  </nav>
+   <body onload="validateLogin()">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Test Site</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="userLoggedIn">
+          <div id="userName">rerewrrw</div>
+          <div id="logOut"><a href="./index.html" onclick="clearStorageLogin()">Log out</a></div>
+        </div>
+        <div id="showLogin">
+        <form class="form-inline my-2 my-lg-0" onsubmit="setStorageLogin()" action="signin.html">
+          <input class="form-control mr-sm-2 navbar-email" id="navbarEmail" type="email" placeholder="UserName" aria-label="Username">
+          <input class="form-control mr-sm-2 navbar-password" id="navbarPassword" type="password" placeholder="Password" aria-label="Password">
+          <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Submit"></input>
+        </form>
+      </div>
+      </div>
+    </nav>
 <div class="container mt-3">
       <div class="row">
         <div class="col-12">
@@ -38,10 +45,11 @@
       </div>
       <div class="row">
       <div class="col-4">
-      <input type="button" class="alert_button" id="alert_button" value="Open Alert" onClick="alert('An alert')">
+      <input type="button" class="alert_button" id="alert_button" value="Open Alert" onClick="alert('An Alert!')">
       </div>
       <div class="col-4">
-        <input type="button" class="confirm_button" id="confirm_button" value="Open Confirm alert" onClick="confirm('An alert with Cancel & OK buttons')">
+        <input type="button" class="confirm_button" id="confirm_button" value="Open Confirm alert" onClick="confirmButton()">
+        <div class="confirm_text" id="confirm_text">Output: </div>
     </div>
      <div class="col-4">
       <input type="button" class="prompt_button" id="prompt_button" value="Open Prompt alert" onClick="promptButton()">
@@ -125,9 +133,6 @@
 	</div>
 	</div>
   <hr>			
-			
-			
-			
 	<div class="container">
   <div class="row">
         <div class="col-md-8 col-12">

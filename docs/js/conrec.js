@@ -1,7 +1,15 @@
 /*
- * Simple Javascript functions used by the course. 
- * The stiorage functions are just meant to simplify some testing. So no usernames or passwords are used except locally in the pages  
+ * Simple Javascript functions used by the course. Quick and dirty...
+ * The storage functions are just meant to simplify some testing. So no usernames or passwords are used except locally in the pages  
  */
+
+function hideDiv(id) {
+    document.getElementById(id).classList.add("invisible")
+}
+
+function showDiv(id) {
+    document.getElementById(id).classList.remove("invisible")
+}
 
 function getNavbarUserName() {
     return document.getElementById("navbarEmail").value;
@@ -28,15 +36,24 @@ function readStorageLoginPassword() {
     return sessionStorage.getItem("password");
 }
 
-function submitLogin() {
-    setStorageLogin();
-    
-    let redirectURL = "http://" + window.location.hostname + window.location.pathname + "/signin.html";
-    window.location.replace(redirectURL);
-
-    // Debug
-    //alert(redirectURL);
+function validateLogin() {
+    if(readStorageLoginUserName() == "letmein@gmail.com" && readStorageLoginPassword() == "secretpassword") {
+        document.getElementById("showLogin").style.display = "none";
+        document.getElementById("userLoggedIn").style.display = "block";
+        document.getElementById("userName").innerHTML = readStorageLoginUserName();  
+        document.getElementsByClassName("checklogin")[0].innerHTML =  "Logged in!"      
+    }
+    else {
+        document.getElementById("showLogin").style.display = "block";
+        document.getElementById("userLoggedIn").style.display = "none";
+        document.getElementsByClassName("checklogin")[0].innerHTML = "Wrong credentials! Please try again."
+    }
 }
+
+function confirmButton() {
+    let userClick = confirm("An alert with Cancel & OK buttons");
+    document.getElementById("confirm_text").innerHTML = "Output: " + (userClick ? "OK" : "Cancel"); 
+  }
 
 function promptButton() {
     let text;
@@ -48,9 +65,3 @@ function promptButton() {
     }
     document.getElementById("prompt_text").innerHTML = text;
   }
-
-// function tests() {
-//     setStorageLogin();
-//     alert("Text: " + readStorageLoginUserName());
-//     alert("Text: " + readStorageLoginPassword());
-// }

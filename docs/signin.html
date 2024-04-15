@@ -7,36 +7,47 @@
     <title>Selenium Course</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="css/conrec.css" rel="stylesheet">
   </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">Test Site</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<body onload="validateLogin()">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Test Site</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="userLoggedIn">
+            <div id="userName">rerewrrw</div>
+            <div id="logOut"><a href="./index.html" onclick="clearStorageLogin()">Log out</a></div>
+          </div>
+          <div id="showLogin">
+          <form class="form-inline my-2 my-lg-0" onsubmit="setStorageLogin()" action="signin.html">
+            <input class="form-control mr-sm-2 navbar-email" id="navbarEmail" type="email" placeholder="UserName" aria-label="Username">
+            <input class="form-control mr-sm-2 navbar-password" id="navbarPassword" type="password" placeholder="Password" aria-label="Password">
+            <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Submit"></input>
+          </form>
         </div>
-  </nav>
-<div class="container mt-3">
+        </div>
+      </nav>
+    <div class="container mt-3">
       <div class="row">
         <div class="col-12">
 			<img src="images/Banner_small.png">
-			<h1 class="text-center">Check sign in credentials</h1>
 	    </div>
       </div>
     </div>
 <hr>
 	<div class="row">
 	<div class="container">
-		<section id="aboutus">
+		<section id="validation">
 			<div class="col-12">
-			Content for About Us page
-			</div>
+                <h1 class="checklogin text-center">Checked sign in credentials</h1>
+ 			</div>
 		</section>
 	</div>
 	</div>
 <hr>
-
-    <footer class="text-center">
+<footer class="text-center">
       <div class="container">
         <div class="row">
           <div class="col-12">
