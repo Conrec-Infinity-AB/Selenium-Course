@@ -41,13 +41,20 @@ function validateLogin() {
         document.getElementById("showLogin").style.display = "none";
         document.getElementById("userLoggedIn").style.display = "block";
         document.getElementById("userName").innerHTML = readStorageLoginUserName();  
-        document.getElementsByClassName("checklogin")[0].innerHTML =  "Logged in!"      
+        document.getElementById("checklogin-text").innerHTML =  "Logged in!";  
+        document.getElementById("redirect-text").innerHTML = "Will redirect you to main page in 5 seconds...";  
+        setTimeout(redirectURL, 5000);   
     }
     else {
         document.getElementById("showLogin").style.display = "block";
         document.getElementById("userLoggedIn").style.display = "none";
-        document.getElementsByClassName("checklogin")[0].innerHTML = "Wrong credentials! Please try again."
+        document.getElementById("checklogin-text").innerHTML = "Wrong credentials!"; 
+        document.getElementById("redirect-text").innerHTML = "Please try again...";
     }
+}
+
+function redirectURL() {
+    document.location.href = "http://" + window.location.host + "/docs/";
 }
 
 function confirmButton() {
