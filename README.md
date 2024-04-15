@@ -91,12 +91,22 @@ The text below should be visible in Viual Studio Code terminal:
 ## Links ##
 - [Our test site online](https://conrec-infinity-ab.github.io/Selenium-Course) This is hosted on Githubs pages. Will be redeployed every time we check in code in this repository. This is the site we will run our test on.
 - [Our test site offline](http://127.0.0.1:5500/docs/index.html) Use the extension Live Server and start index.html page in the ./docs folder. Use this one if you are offline or want to test changes locally before commiting to the repository. 
+
 - [Selenium documentation](https://www.selenium.dev/documentation/) Everything related to Selenium APi and Grid and more
 - [Python language bindings for Selenium WebDriver](https://www.selenium.dev/selenium/docs/api/py/api.html#) Python bindings for Selenium 4
+- [Selenium with Python](https://selenium-python.readthedocs.io/index.html) Good site for more examples, API calls and exceptions and more
+
 - [Python documentation](https://docs.python.org/3/) Everything related to the Python language 
 - [Python Package Index](https://pypi.org) The repository for Python packages which can be imported, including instructions how to install them with the **_pip_** command
+- [Pytest documentation](https://docs.pytest.org/en/8.0.x/how-to/index.html) Here you find everything related to Pytest
+
 - [Selenium Package](https://pypi.org/project/selenium/) Selenium Pip install instructions and basic usage examples
 - [Virtual environments](https://docs.python.org/3/library/venv.html) How to setup and use virtual environments in Python 
+
 - [Google DevTools](https://developer.chrome.com/docs/devtools) Googles developer tool used in Chrome webbrowser. A tool you should be comfortable with when writing Selenium tests
+- [Google Chrome command switches](https://peter.sh/experiments/chromium-command-line-switches/) A comprehensive list of command options for Google Chrome
+
 - [Softwaretestingboard](https://magento.softwaretestingboard.com) A site which can be used for tests 
 - [Saucedemo](https://www.saucedemo.com/) Another site which can be used for running tests against 
+
+
