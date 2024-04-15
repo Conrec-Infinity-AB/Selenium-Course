@@ -4,11 +4,11 @@
  */
 
 function hideDiv(id) {
-    document.getElementById(id).classList.add("invisible")
+    document.getElementById(id).classList.add("invisible");
 }
 
 function showDiv(id) {
-    document.getElementById(id).classList.remove("invisible")
+    document.getElementById(id).classList.remove("invisible");
 }
 
 function getNavbarUserName() {
@@ -54,13 +54,17 @@ function validateLogin() {
 }
 
 function redirectURL() {
-    document.location.href = "http://" + window.location.host + "/docs/";
+    // Check if local development or published to GitHub.io. Different paths 
+    let protocol = window.location.protocol + "//";
+    let path = (window.location.host == "conrec-infinity-ab.github.io" ? "/Selenium-Course/index.html" : "/docs/index.html");
+    let redirectURL  = protocol + window.location.host + path;
+    document.location.href = redirectURL;
 }
 
 function confirmButton() {
     let userClick = confirm("An alert with Cancel & OK buttons");
     document.getElementById("confirm_text").innerHTML = "Output: " + (userClick ? "OK" : "Cancel"); 
-  }
+}
 
 function promptButton() {
     let text;
@@ -71,4 +75,4 @@ function promptButton() {
       text = "Output: " + name;
     }
     document.getElementById("prompt_text").innerHTML = text;
-  }
+}
