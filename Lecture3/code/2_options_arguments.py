@@ -11,7 +11,7 @@ chrome_options = Options()
 chrome_options.add_argument("--window-size=600,800")
 
 # Make sure we use the options we set
-driver = webdriver.Chrome(chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/index.html")
 
