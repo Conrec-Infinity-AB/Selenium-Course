@@ -11,8 +11,37 @@ It's possible to clear texts in input fields
 > element.clear()
 
 ## Get text and info for an element
-Get the text of the element
+Get all the text and tags within another tag. It will return the html code if there are tags within the tag you are selecting
+> element.get_attribute("innerHTML")
+
+Example html:
+```
+<div id="outerDiv">
+    <div id="innerDiv">
+        <h1>This is a header</h1>
+    </div>
+</div>
+```
+Example:
+```
+element = find_element(By.ID, "outerDiv") # We select the outer div
+result = element.get_attribute("innerHTML") # and get the content of the outer div
+```
+result will then include the following
+```
+<div id="innerDiv">
+    <h1>This is a header</h1>
+</div>  
+```
+That might not be what you want so instead we can use 
 > element.text
+
+```
+result = element.text
+```
+> This will only return the text, in this case
+
+> This is a header
 
 Get the tag name of the element a selected element
 > element.tag_name
