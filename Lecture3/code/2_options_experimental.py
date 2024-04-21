@@ -1,6 +1,6 @@
-# This file
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
 from time import sleep
 
 # Create the Options object which will be used to change Chrome behaviour

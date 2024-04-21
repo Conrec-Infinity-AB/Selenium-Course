@@ -5,9 +5,10 @@ from time import sleep
 # Create the Options object which will be used to change Chrome behaviour
 chrome_options = Options()
 
-chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--headless")
 # chrome_options.add_argument("--start-maximized")
 # chrome_options.add_argument("--start-fullscreen")
+chrome_options.add_argument("--window-size=600,800")
 
 # Make sure we use the options we set
 driver = webdriver.Chrome(chrome_options)
