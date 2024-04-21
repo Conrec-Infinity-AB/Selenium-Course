@@ -35,7 +35,7 @@ Both works and when Pytest executes tests, it will search for test files in the 
 
 Organizing all tests in a test folder with sub folders is a good practise and Pytest will consider all the files as test files. 
 
-Run all tests in the test folder and its sub folders
+To run all tests in the test/ folder and its sub folders
 > pytest test/
 
 It is also possible to run individual test files by explicitly mentioning thir file names. 
@@ -52,10 +52,7 @@ For example a test function
 
 This makes it easy to identify and run tests in Pytest.
 
-If we want to run one or more test files we can mention by them by their file names.
-> pytest test/test_login.py test/test_logout.py -v -s
-
-And if we want to find and run all tests with some text in their their names or function names, we can do that too. 
+If we want to find and run all tests with some text in their their names or function names, we can do that too. 
 
 For exampe if we want to run all tests and functions with **_Login_** in their names we can use the following:
 > pytest -k Login -v -s
@@ -112,7 +109,214 @@ def test_login_username():
     ... assert something ...   
 ```
 
+## Behave - Behave is a Behavior Driven Development 
+[Behave](https://behave.readthedocs.io/en/latest/)
+Behave is a Behavior Driven Development (BDD) framework for Python that enables writing and executing high-level scenarios and feature files in a natural language format. 
 
-## Behave
+Behave is built on top of Gherkin language, which is written using "Given", "When", "And" and "Then" keywords, which are easy to understand by both technical and non-technical stakeholders.
+
+### Behavior Driven Development Keywords
+- Given: The Given step is used to describe the preconditions or the initial state of the system. It sets up the context in which the scenario takes place.
+
+- When: The When step is used to describe the action or event that the user performs on the system. It represents the trigger that causes the system to behave in a certain way. 
+
+- Then: The Then step is used to describe the expected outcome or result of the action or event described in the When step. It represents the expected behavior of the system.
+
+- And: The And step is used to concatenate multiple Given, When or Then steps, that belong to the same scenario and create more complex scenarios that involve multiple steps, making it easier to write more comprehensive tests.
+
+### Installation
+Install with pip and verify it were installed successfully
+```
+pip install behave
+
+behave --version
+behave 1.2.6
+```
+
+Then create a **_features_** folder in the root folder of the project. This folder will contain all features we want to test in our project
+> mkdir features
+
+### Example
+In the features folder create a features file 
+> login.feature
+
+Add the feaatures you want to test
+```
+Feature: Login functionality
+As a user,
+I want to be able to log in to the application so I can access my account.
+```
+
+```
+Scenario: Valid credentials
+Given I am on the login page
+When I enter valid username and password 
+And I click the login button
+Then I should see the sucessful login page
+```
+
+Then we need to implement some code for the features. So in the features folder create a **_steps_** folder 
+> mkdir steps
+
+Then create the Python file for the features implementation
+> loginSteps.py
+```
+from behave import *
+... other imports ...
+
+@given("I am on the main page")
+def launch_browser(context):
+    context.driver = webdriver.Chrome(service=Service(ChromeDriverManager("").install()))
+    context.driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
+
+@when('I enter valid "{username}" and "{password}"')
+def valid_username_password_parameter(context, username, password):
+    context.driver.find_element(By.ID, "navbarEmail").send_keys("letmein@gmail.com")
+    context.driver.find_element(By.ID, "navbarPassword").send_keys("secretpassword")
+
+@when(u'I click the login button')
+def click_login(context):
+    context.driver.find_element(By.ID, "loginButton").click()
+
+@then("I should see the login status page")
+def verify_successful(context):
+    statusText = context.driver.find_element(By.ID, "checklogin-text").text
+    assert statusText == "Logged in!"
+
+@then(u'I close the browser')
+    def teardown(context):
+    context.driver.quit()
+```
+
+Then when features and code has been setup we can first check if everything has been implemented.
+> behave --dry-run
+``` 
+0 features passed, 0 failed, 0 skipped, 1 untested
+0 scenarios passed, 0 failed, 0 skipped, 5 untested
+0 steps passed, 0 failed, 0 skipped, 5 undefined, 14 untested
+Took 0m0.000s
+
+You can implement step definitions for undefined steps with these snippets:
+
+@given(u'I am on the main page')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Given I am on the main page')
+```
+
+If everything looks good, lets run the tests
+> behave
+
+Now the browser should open up and run the scenario and its features.
 
 ## Robot Framework
+[Robot Framework](https://robotframework.org) and [Robot framework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)
+
+Another major framework is the open-source Robot framework which can be used for acceptance testing, Acceptance Test Driven Development, Behavior Driven Development and Robotic Process Automation (RPA).
+
+It is designed to write test cases in a keyword-driven testing approach and provides test libraries to implement test automation flows. This way we do not need to write as much code to create test cases.
+
+The Robot Framework is a flexible and powerful test automation framework that can be integrated with a wide range of tools and technologies. It supports various interfaces and protocols, making it possible to automate different types of systems and applications.
+
+_We wont get into detail how to write Robot Framework tests but it is easy to add to Selenium when using Python. Below is how you get started._
+
+### Installation
+Install with pip and verify it were installed successfully
+
+pip install robotframework
+
+Verify it was installed
+```
+pip show robotframework
+Name: robotframework
+Version: 7.0
+...
+```
+
+We also need to install the SeleniumLibrary used by Robot Framework
+> pip install robotframework-seleniumlibrary
+
+And to verify it was installed
+```
+pip show robotframework-seleniumlibrary
+Name: robotframework-seleniumlibrary
+Version: 6.3.0
+...
+```
+
+### Folder structure
+The folder structure in the Robot framework is sued to get an organized, and easy to manage structure. The main folders and files added in the robot framework within the root folder are test suites, test cases, test data, resources, config, and library. 
+
+The test files have the extension **_.robot_** and the resources file has the extension **_.resource_**.
+
+- Test Suite folder: The test suite folder contains all the test suite files and contains the test cases to be executed. The test cases contain keywords. When the complete Test suite is executed, all the test cases within the suite are executed
+
+- Resource Folder: The resource folder is where both user-defined and the library reusable keywords are defined. These keywords can be shared across multiple test suites and test cases. To use the keywords in resource files, these files are required to be imported into the test suite using the **_Resource_** keyword
+
+- Test Data Folder: Test Data folder is used to store all the data files required for the automation of the project. It can be API request payload data to access APIs, database query data, or excel sheet data for data parameterization.
+
+- Configs and Libraries: The Python code implementation of user-defined keywords are added in the Python file in the library folder, and test execution configurations such as test environments, environment variables from the config file, and so on, are added in the configs folder.
+
+- Results Folder: When the robot framework is executed, the log and report files are stored in the results folder. By default, these files are created in the root directory, but can be configured to be placed in the results folder. In addition to log file, the results folder can contain screenshots generated by the robot framework.
+
+### Example
+The robot test file
+> login.robot
+```
+*** settings ***
+Library                         SeleniumLibrary
+
+Resource                        ./code1.resource
+
+Test Setup                      Open Application
+Test Teardown                   Close Browser
+
+*** variables ***
+S{url}                          https://conrec-infinity-ab.github.io/Selenium-Course/
+$(username)                     letmein@gmail.com
+${password}                     secretpassword
+
+
+*** Test Cases ***
+Validate User is able to login to the application
+    Given User is able to navigate to the application
+    And Enter the valid login credentials and submit
+    Then Validate user is successfully logged into the application
+```
+    
+The test resource file
+> code1.resource
+```
+*** Keywords ***
+Open Application
+    Open Browser                browser=chrome
+
+User is able to navigate to the application    
+    Goto                       ${url}
+
+Enter the valid login credentials and submit
+    Input Text                  navbarEmail       $(username)
+    Input Password              navbarPassword    $(password)
+    Click Element               loginButton
+
+Validate user is successfully logged into the application
+    sleep 5
+    ${pageTitle}                GetTitle
+    Log                         ${pageTitle}
+    Wait Until Page Contains    Logged in!
+```
+
+### Running tests
+> robot login.robot
+
+>robot path/to/my_tests/
+
+### Advantages of Robot Framework 
+- The Robot framework is easy to implement even with little to no programming experience
+
+- Keyword-driven testing: Robot framework allows writing the test cases using high-level, business-friendly language
+
+- Test libraries: There are builtin and custom test libraries which makes it easy to write test with little code. 
+
+- Can be easily integrated with CI/CD pipelines
+
+- Built in logging and reporting
