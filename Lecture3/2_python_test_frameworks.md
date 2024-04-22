@@ -1,6 +1,4 @@
 # Test frameworks
-
-
 ## Pytest
 https://docs.pytest.org/en/8.0.x/how-to/index.html
 
@@ -33,7 +31,7 @@ For example we can name test files like the following:
 
 Both works and when Pytest executes tests, it will search for test files in the current directory and subdirectories and identifies all of them as test files. 
 
-Organizing all tests in a test folder with sub folders is a good practise and Pytest will consider all the files as test files. 
+Organizing all tests in a **_test_** folder with sub folders is a good practise and Pytest will consider all the files as test files. 
 
 To run all tests in the test/ folder and its sub folders
 > pytest test/
