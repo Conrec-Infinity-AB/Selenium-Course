@@ -37,19 +37,31 @@ function readStorageLoginPassword() {
 }
 
 function validateLogin() {
+    // Get the current page, because we check loggedin on every page
+    path = window.location.pathname;
+    let currentPage = path.substring(path.lastIndexOf("/") + 1);
+
     if(readStorageLoginUserName() == "letmein@gmail.com" && readStorageLoginPassword() == "secretpassword") {
         document.getElementById("showLogin").style.display = "none";
         document.getElementById("userLoggedIn").style.display = "block";
-        document.getElementById("userName").innerHTML = readStorageLoginUserName();  
-        document.getElementById("checklogin-text").innerHTML =  "Logged in!";  
-        document.getElementById("redirect-text").innerHTML = "Will redirect you to main page in 5 seconds...";  
-        setTimeout(redirectURL, 5000);   
+        document.getElementById("userName").innerHTML = readStorageLoginUserName();
+
+        // Only set text if were on the signin page
+        if(currentPage == "signin.html") {
+            document.getElementById("checklogin-text").innerHTML =  "Logged in!";  
+            document.getElementById("redirect-text").innerHTML = "Will redirect you to main page in 5 seconds...";  
+            setTimeout(redirectURL, 5000);
+        }       
     }
     else {
         document.getElementById("showLogin").style.display = "block";
         document.getElementById("userLoggedIn").style.display = "none";
-        document.getElementById("checklogin-text").innerHTML = "Wrong credentials!"; 
-        document.getElementById("redirect-text").innerHTML = "Please try again...";
+
+        // Only set text if were on the signin page
+        if(currentPage == "signin.html") {
+            document.getElementById("checklogin-text").innerHTML = "Wrong credentials!"; 
+            document.getElementById("redirect-text").innerHTML = "Please try again...";
+        }
     }
 }
 
