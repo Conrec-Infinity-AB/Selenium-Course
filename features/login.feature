@@ -9,7 +9,7 @@ Feature: Login functionality
   Scenario: Valid credentials
     When I enter valid "letmein@gmail.com" and "secretpassword"
     And I click the login button
-    Then I should see the login status page
+    Then I should see the logged in page
     And I close the browser
 
   Scenario: Invalid credentials
@@ -19,13 +19,14 @@ Feature: Login functionality
     And I close the browser
 
 
-  Scenario Outline: Multiple credentials
-    When I enter valid "<username>" and "<password>"
+  Scenario Outline: Multiple invalid credentials
+    When I enter invalid "<username>" and "<password>"
     And I click the login button
+    Then I should see an error message
+    And I close the browser
 
     Examples:
       |username                   |password           |
-      |letmein@gmail.com          |secretpassword     |
       |letmein@gmail.com          |wrongpassword      |
       |admin@gmail.com            |secretpassword     |
        
