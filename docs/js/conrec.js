@@ -41,6 +41,7 @@ function validateLogin() {
     path = window.location.pathname;
     let currentPage = path.substring(path.lastIndexOf("/") + 1);
 
+    // Logged in
     if(readStorageLoginUserName() == "letmein@gmail.com" && readStorageLoginPassword() == "secretpassword") {
         document.getElementById("showLogin").style.display = "none";
         document.getElementById("userLoggedIn").style.display = "block";
@@ -51,8 +52,14 @@ function validateLogin() {
             document.getElementById("checklogin-text").innerHTML =  "Logged in!";  
             document.getElementById("redirect-text").innerHTML = "Will redirect you to main page in 5 seconds...";  
             setTimeout(redirectURL, 5000);
-        }       
+        }     
+         // Only set text if were on the index page. Members area visible
+        if(currentPage == "index.html") {
+            document.getElementsByClassName("members-area")[0].style.display = "block";
+        }     
+        
     }
+    // Not logged in
     else {
         document.getElementById("showLogin").style.display = "block";
         document.getElementById("userLoggedIn").style.display = "none";
@@ -62,6 +69,11 @@ function validateLogin() {
             document.getElementById("checklogin-text").innerHTML = "Wrong credentials!"; 
             document.getElementById("redirect-text").innerHTML = "Please try again...";
         }
+
+        // Only set text if were on the index page. Members area not visible
+        if(currentPage == "index.html") {
+            document.getElementsByClassName("members-area")[0].style.display = "none";
+        }     
     }
 }
 
