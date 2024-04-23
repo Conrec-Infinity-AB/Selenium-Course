@@ -6,8 +6,6 @@ from time import sleep
 # Create the Options object which will be used to change Chrome behaviour
 chrome_options = Options()
 
-# Remove the banner about browser is used by automation
-chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 # Disable popup blocker
 chrome_options.add_experimental_option("excludeSwitches", ["disable-popup-blocking"])
 
