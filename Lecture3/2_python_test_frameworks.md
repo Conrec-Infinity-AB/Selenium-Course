@@ -102,10 +102,70 @@ def test_login_username():
 
 And if we want to fail a test by purpose
 ```
-@pytest.mark.xfail(reason="Expected to fail until we fix the bug."
+@pytest.mark.xfail(reason="Expected to fail until we fix the bug.")
 def test_login_username():
     ... assert something ...   
 ```
+
+### Fixtures
+Fixtures in Pytest is a function that will be reused by several tests. An example is a setup function which we want to run before every test.
+
+Like markers we setup fixtures with a Python decorator **_@pytest.fixture_**
+``` 
+@pytest.fixture
+def setup():
+    ... code we want to run before actual tests ...
+```
+
+Then our test functions we need to call the setup fixture by calling the test with our setup function
+```
+def test_ourTest(setup):
+    ... code ...
+```
+
+Now the setup will run everytime a test calls it 
+
+## Assertions
+We have used it before but not really talked about the assert function. When writing test cases we need to know if the functionality we are testing are as we expect or not. In Python there is an built in assertion function which is sufficient in most cases. But if we want to have more control over what we test then we can install a third party assert library.
+
+One is **_assertpy_** which is popular and which we will install.
+> pip install assertpy
+
+When it has been installed we need to import the package in our Python test. Then we can use all the assert functions we need. See [AssertPy docs](https://assertpy.github.io/docs.html). Now we have more control over what we want to assert on.
+
+```
+from assertpy import assert_that
+
+assert_that('foo').starts_with('f')
+assert_that('123').is_digit()
+assert_that('').is_empty()
+
+... And more ...
+```
+
+Another assertion library we can use is for example [Grappa](https://github.com/grappa-py/grappa). 
+It uses declarative assertion styles as **_expect_** and **_should_**.
+
+Install it by 
+> pip install grappa
+
+```
+from grappa import should
+
+3.14 | should.be.lower.than(4)
+
+foo = 'bar'
+foo | should.equal('bar')
+foo | expect.to.equal('bar')
+foo | expect.to.be.a('string')
+
+... And more ...
+```
+
+
+
+
+
 
 ## Behave - Behave is a Behavior Driven Development 
 [Behave](https://behave.readthedocs.io/en/latest/)
