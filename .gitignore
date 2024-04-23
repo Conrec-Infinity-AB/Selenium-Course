@@ -163,3 +163,8 @@ cython_debug/
 #.idea/
 report.html
 assets/style.css
+log.html
+output.xml
+regressiontest_report.html
+selenium-screenshot-1.png
+selenium-screenshot-2.png

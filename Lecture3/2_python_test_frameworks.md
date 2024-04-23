@@ -242,7 +242,7 @@ Version: 6.3.0
 ```
 
 ### Folder structure
-The folder structure in the Robot framework is sued to get an organized, and easy to manage structure. The main folders and files added in the robot framework within the root folder are test suites, test cases, test data, resources, config, and library. 
+The folder structure in the Robot framework is used to get an organized, and easy to manage structure. The main folders and files added in the robot framework within the root folder are test suites, test cases, test data, resources, config, and library. 
 
 The test files have the extension **_.robot_** and the resources file has the extension **_.resource_**.
 
@@ -307,6 +307,33 @@ Validate user is successfully logged into the application
 > robot login.robot
 
 >robot path/to/my_tests/
+
+### Locators
+When using Robot Framework we can match locators by different strategies. below are some examples
+
+| Strategy | Match based on      | Example       |
+| ---------| -----------         |------------   |
+| id       | Element id          | id:email      |
+| name     | name attrubute      | name:submit   |
+| class    | Element class name  | class:button  |
+| tag      | Tag name            | tag:div       |
+| xpath    | XPath expression    | xpath://div[@id="email"] | 
+| css      | CSS selector        | css:div#email |
+
+### Keywords
+There are many keywords to use when writing the tests. Both [built in](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html) and in external libraries like [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+
+| Keyword           | example / value                   | Comment                             | Library / built in   | 
+| ---------         | -----------                       | ------                              | ------------         |
+| Get Title         | ${pageTitle}    Get Title         | Saves page title to an variable     | SeleniumLibrary      |
+| Sleep             | sleep           5s                | Sleeps 5 sec, can use other formats | Base library      |
+| Should Be Equal   | Should Be Equal ${pageTitle} Text | Check if pageTitle is equal to text | Base library         |
+| Click Button      | Click Button    id:button         | Click button with id:button         | SeleniumLibrary      |
+| Click Element     | Click Element   id:submit         | Click an element with id:submit     | SeleniumLibrary      |
+| Get Text          | Get text        tag:h1            | Get the text from H1 tag            | SeleniumLibrary      |
+| Input Text        | Input Text      email             | Enter text in an input field email  | SeleniumLibrary      |
+
+**_Note_** in last example **_Input Text_** we do not need to include the **_id:_** if the value is an ID beacuse Robot Framework looks for ID as default
 
 ### Advantages of Robot Framework 
 - The Robot framework is easy to implement even with little to no programming experience
