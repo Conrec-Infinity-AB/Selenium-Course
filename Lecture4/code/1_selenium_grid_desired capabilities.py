@@ -29,6 +29,6 @@ driver = webdriver.Remote(options=chrome_options, command_executor=selenium_grid
 
 
 driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
-sleep(3)
+sleep(180)
 
 driver.quit()
