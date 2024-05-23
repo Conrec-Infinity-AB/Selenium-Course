@@ -15,8 +15,8 @@ chrome_options = Options()
 
 # Old way to inform a Selenium grid where tests should run was to use Desired Capabilities. This has been removed from Selenium 4.
 # Instead options should be used
-chrome_options.browser_version = "124"
-chrome_options.platform_name = "Windows 11"
+# chrome_options.browser_version = "124"
+# chrome_options.platform_name = "Windows 11"
 chrome_options.accept_insecure_certs = True
 chrome_options.page_load_strategy = "eager"
 
