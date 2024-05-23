@@ -93,7 +93,7 @@ Output:
 @pytest.mark.regression: marks a test as a regression test
 ```
 
-If we want to skip a test we can also mark them with the **_skip** marker
+If we want to skip a test we can also mark them with the **_skip_** marker
 ```
 @pytest.mark.skip(reason="This test is temporarily disabled.")
 def test_login_username():
