@@ -19,8 +19,4 @@ Run the tests with pytest as usual but add the option **_--html=report.html_** w
 ## Allure reports
 Another reporting tool which is commonly used is Allure reports. It has more functionality and works with majority of programming languages. 
 
-For Python there is the plugin [Allure-pytest](https://pypi.org/project/allure-pytest/). But for the plugin to work [Allure](https://allurereport.org) also needs to be installed on the computer. Its some more work to do to get all up and running but. Allure produces nice reports. 
-
-
-
-
+For Python there is the plugin [Allure-pytest](https://pypi.org/project/allure-pytest/). But for the plugin to work [Allure](https://allurereport.org) also needs to be installed on the computer. Its some more work to do to get all up and running but. But Allure produces really nice reports.

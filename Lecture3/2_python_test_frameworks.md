@@ -162,11 +162,6 @@ foo | expect.to.be.a('string')
 ... And more ...
 ```
 
-
-
-
-
-
 ## Behave - Behave is a Behavior Driven Development 
 [Behave](https://behave.readthedocs.io/en/latest/)
 Behave is a Behavior Driven Development (BDD) framework for Python that enables writing and executing high-level scenarios and feature files in a natural language format. 
@@ -269,11 +264,13 @@ Now the browser should open up and run the scenario and its features.
 ## Robot Framework
 [Robot Framework](https://robotframework.org) and [Robot framework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)
 
-Another major framework is the open-source Robot framework which can be used for acceptance testing, Acceptance Test Driven Development, Behavior Driven Development and Robotic Process Automation (RPA).
+Another major framework is the open-source Robot framework which can be used for acceptance testing, Behavior Driven Development and Robotic Process Automation (RPA) and more.
 
 It is designed to write test cases in a keyword-driven testing approach and provides test libraries to implement test automation flows. This way we do not need to write as much code to create test cases.
 
-The Robot Framework is a flexible and powerful test automation framework that can be integrated with a wide range of tools and technologies. It supports various interfaces and protocols, making it possible to automate different types of systems and applications.
+The Robot Framework is a flexible and powerful test automation framework that can be used stand alone or integrated with a wide range of tools and technologies. It supports various interfaces and protocols, making it possible to automate different types of systems and applications. 
+
+We will use it with Selenium, just to get a glimpse what we can do with the framework.
 
 _We wont get into detail how to write Robot Framework tests but it is easy to add to Selenium when using Python. Below is how you get started._
 
