@@ -20,13 +20,7 @@ chrome_options = Options()
 chrome_options.accept_insecure_certs = True
 chrome_options.page_load_strategy = "eager"
 
-# driver = webdriver.Chrome(
-#     # service=ChromeService(ChromeDriverManager(driver_version="124.0").install()),
-#     options=chrome_options,
-# )
-
 driver = webdriver.Remote(options=chrome_options, command_executor=selenium_grid)
-
 
 driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
 sleep(180)

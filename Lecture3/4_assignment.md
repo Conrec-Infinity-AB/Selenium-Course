@@ -1,8 +1,7 @@
-# Assignment 2 #
-## What we learned ##
+# Assignment 2
 We did not have any assignment after session 2 so in this assignment try combine what we learned up till todays session.
 
-## Assignment ##
+## Assignment
 This assignment will use either Behave (BDD) or Robot Framework to create some tests. 
 Make sure assertions are used in the tests
 
@@ -14,7 +13,7 @@ Make sure assertions are used in the tests
 
 4. Zip your project for the assignment and send to me or if you rather want to use a Github/Bitbucket repository, give me the link so i can check the code. 
 
-### Test scenario ###
+### Test scenario
 As a user I want to login to my member page and check my messages and when I have checked my messages i should successfully log out again
 1. Open the page "https://conrec-infinity-ab.github.io/Selenium-Course/"
 
@@ -28,7 +27,7 @@ As a user I want to login to my member page and check my messages and when I hav
 
 6. Then log out the user again. Check if the user is logged out sucessfully and the members area is not visible any longer
 
-### Advanced ###
+### Advanced
 **_This assignment you do not need to use any test framework_**
 
 On the main page find all new employees and 
@@ -39,8 +38,7 @@ On the main page find all new employees and
 Find the main div where all New employees are located start from it to find all employees
 
 
-
-Any questions or errors in text, please get back to Peter!
+**_Any questions or errors in text, please get back to Peter!_**
 
 
 
