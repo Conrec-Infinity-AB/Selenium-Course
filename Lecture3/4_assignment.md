@@ -3,9 +3,8 @@ We did not have any assignment after session 2 so in this assignment try combine
 
 ## Assignment
 This assignment will use either Behave (BDD) or Robot Framework to create some tests. 
-Make sure assertions are used in the tests
 
-1. Create a new projects and import relevant libraries/packages for BDD or Robot framework and a assert library you want to use 
+1. Create a new projects and import relevant libraries/packages for BDD or Robot framework and a assert library if you need one 
 
 2. Create the tests below using any of the above test frameworks
 
