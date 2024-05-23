@@ -27,14 +27,15 @@ As a user I want to login to my member page and check my messages and when I hav
 6. Then log out the user again. Check if the user is logged out sucessfully and the members area is not visible any longer
 
 ### Advanced
-**_This assignment you do not need to use any test framework_**
+**_In this assignment you do not need to use any test framework_**
 
 On the main page find all new employees and 
 * Print out the names of the new employees to the terminal/console
-* Print out the sum of the new employees to the terminal. It should equal 9.
+* Print out the sum of number of new employees to the terminal. It should equal 9.
 
 **_Tip_**
-Find the main div where all New employees are located start from it to find all employees
+
+Find a div where all New employees are located start from it to find all employees
 
 
 **_Any questions or errors in text, please get back to Peter!_**
