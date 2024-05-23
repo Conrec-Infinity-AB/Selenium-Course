@@ -8,7 +8,7 @@ This assignment will use either Behave (BDD) or Robot Framework to create some t
 
 2. Create the tests below using any of the above test frameworks
 
-3. Run all testa and create a report of the test result using pytest-html
+3. Run all tests and create a report of the test result using pytest-html
 
 4. Zip your project for the assignment and send to me or if you rather want to use a Github/Bitbucket repository, give me the link so i can check the code. 
 
