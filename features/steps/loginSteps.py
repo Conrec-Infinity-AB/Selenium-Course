@@ -14,14 +14,6 @@ def launch_browser(context):
     )
     context.driver.get("https://conrec-infinity-ab.github.io/Selenium-Course/")
 
-
-@when('I enter valid "letmein@gmail.com" and "secretpassword"')
-def valid_username_password_parameter(context):
-    context.driver.find_element(By.ID, "navbarEmail").send_keys("letmein@gmail.com")
-    context.driver.find_element(By.ID, "navbarPassword").send_keys("secretpassword")
-    sleep(2)
-
-
 @when("I click the login button")
 def click_login(context):
     context.driver.find_element(By.ID, "loginButton").click()
