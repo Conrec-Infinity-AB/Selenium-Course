@@ -89,6 +89,8 @@ The text below should be visible in Viual Studio Code terminal:
 > Title is: Home Page
 
 ## Links ##
+- [Course recordings](https://conrecinfinity2021.sharepoint.com/:f:/s/ConrecInfinity/EhTzhaQoA15Gju5-tzXswh8BwftXMnkdGaSJd_mQrbxNPw?e=oIz18x) Here you find all the recordings from lessons 1-3(4)
+ 
 - [Our test site online](https://conrec-infinity-ab.github.io/Selenium-Course) This is hosted on Githubs pages. Will be redeployed every time we check in code in this repository. This is the site we will run our test on.
 - [Our test site offline](http://127.0.0.1:5500/docs/index.html) Use the extension Live Server and start index.html page in the ./docs folder. Use this one if you are offline or want to test changes locally before commiting to the repository. 
 
